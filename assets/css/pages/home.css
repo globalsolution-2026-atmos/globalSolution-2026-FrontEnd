@@ -1,0 +1,39 @@
+.hero {
+    min-height: calc(100vh - 6rem);
+}
+
+.container__div {
+    background-image: url(../../img/iss073e0575226orig.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container__div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .72), rgba(0, 0, 0, .24), rgba(0, 0, 0, .08));
+}
+
+.container__div-content {
+    position: relative;
+    width: 50%;
+    margin-left: 10rem;
+}
+
+.hero__main-title {
+    font-size: 9rem;
+    line-height: 1;
+}
+
+.hero__main-subtitle {
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 1.5;
+}

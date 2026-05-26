@@ -1,0 +1,6 @@
+@import url('./variables.css');
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('../layouts/header.css');
+@import url('../components/button.css');
+@import url('../pages/home.css');

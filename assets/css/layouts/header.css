@@ -1,0 +1,54 @@
+.header {
+    background-color: var(--full-black);
+    height: 6rem;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.menu__expand {
+    background: none;
+    border: 0;
+    color: var(--mist);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font: inherit;
+    width: fit-content;
+}
+
+.menu-btn {
+    font-weight: 500;
+    line-height: 1;
+}
+
+.atmos-logo {
+    display: flex;
+    align-items: center;
+}
+
+.atmos-logo img {
+    display: block;
+    height: 7rem;
+    width: auto;
+}
+
+.menu__expand::after {
+    content: "";
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    border-right: .2rem solid var(--mist);
+    border-bottom: .2rem solid var(--mist);
+    flex-shrink: 0;
+    transform: rotate(45deg) translateY(-.2rem);
+}
