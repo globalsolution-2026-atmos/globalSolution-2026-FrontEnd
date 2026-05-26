@@ -1,8 +1,16 @@
 .header {
-    background-color: var(--full-black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.80);
+    border-bottom: .1rem solid rgba(255, 255, 255, .12);
+    backdrop-filter: blur(1.6rem) saturate(140%);
+    -webkit-backdrop-filter: blur(1.6rem) saturate(140%);
     height: 6rem;
     width: 100%;
     font-size: 1.6rem;
+    box-shadow: 0 .8rem 3rem rgba(0, 0, 0, .18);
 }
 
 .header__content {
