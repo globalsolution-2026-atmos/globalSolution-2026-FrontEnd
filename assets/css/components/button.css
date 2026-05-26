@@ -9,7 +9,8 @@
     overflow: hidden;   
     isolation: isolate; 
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(190, 190, 190, 0.25)
+    box-shadow: 0 0 20px rgba(190, 190, 190, 0.25);
+    font-size: 1.4rem;
 }
 
 .glow {
