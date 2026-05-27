@@ -11,6 +11,8 @@
 /* Components */
 @import url('../components/button.css');
 @import url('../components/menu.css');
+@import url('../components/login-modal.css');
+
 
 /* Pages */
 @import url('../pages/home.css');
