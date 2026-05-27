@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/base/import.css">
-    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
-    <script src="./assets/js/menu.js" defer></script>
-    <script src="./assets/js/login-modal.js" defer></script>
-    <title>Home</title>
+    <link rel="stylesheet" href="../assets/css/base/import.css">
+    <script src="../assets/js/menu.js" defer></script>
+    <script src="../assets/js/login-modal.js" defer></script>
+    <title>Dashboard</title>
 </head>
-<body class="page__home">
+<body class="page__equipe">
     <header class="header">
         <div class="header__content">
             <button class="menu__expand" type="button">
                 <span class="menu-btn">Menu</span>
             </button>
-            <a href="./index.html" class="atmos-logo">
-                <img src="./assets/img/logo2.png" alt="logo atmos">
+            <a href="../index.html" class="atmos-logo">
+                <img src="../assets/img/logo2.png" alt="logo atmos">
             </a>
             <button type="button" class="main-button btn-login">
-            <span>Acessar Plataforma</span>
+                <span>Acessar Plataforma</span>
                 <div class="glow"></div>
             </button>
         </div>
@@ -27,15 +26,15 @@
         <div class="menu__open">
             <div class="content__menu">
                 <nav class="menu-left">
-                    <a href="#" class="redirect active" data-panel="home">Home</a>
+                    <a href="#" class="redirect" data-panel="home">Home</a>
                     <a href="#" class="redirect" data-panel="equipe">Equipe</a>
                     <a href="#" class="redirect" data-panel="faq">FAQ</a>
-                    <a href="#" class="redirect" data-panel="solucao">Solução</a>
+                    <a href="#" class="redirect active" data-panel="solucao">Solução</a>
                     <a href="#" class="redirect" data-panel="contato">Contato</a>
                 </nav>
                 <div class="menu-right">
 
-                    <a href="./index.html" class="panel active" id="panel-home">
+                    <a href="../index.html" class="panel" id="panel-home">
                         <div class="menu-top">
                             <h2 class="panel-title">Home</h2>
                             <p class="panel-subtitle">
@@ -44,10 +43,10 @@
                                 para monitorar cidades em tempo real com precisão, velocidade e visão estratégica.
                             </p>
                         </div>
-                        <img src="./assets/img/iss073e0575226orig.webp" alt="preview da home" class="img__menu">
+                        <img src="../assets/img/iss073e0575226orig.webp" alt="preview da home" class="img__menu">
                     </a>
 
-                    <a href="./pages/equipe.html" class="panel" id="panel-equipe">
+                    <a href="./equipe.html" class="panel" id="panel-equipe">
                         <div class="menu-top">
                             <h2 class="panel-title">Nossa Equipe</h2>
                             <p class="panel-subtitle">
@@ -57,10 +56,10 @@
                                 seguros e sustentáveis.
                             </p>
                         </div>
-                        <img src="./assets/img/preview-equipe.png" alt="preview da equipe" class="img__menu">
+                        <img src="../assets/img/preview-equipe.png" alt="preview da equipe" class="img__menu">
                     </a>
 
-                    <a href="./pages/faq.html" class="panel" id="panel-faq">
+                    <a href="./faq.html" class="panel" id="panel-faq">
                         <div class="menu-top">
                             <h2 class="panel-title">Nosso Faq</h2>
                             <p class="panel-subtitle">
@@ -69,23 +68,23 @@
                             precisão, segurança e eficiência.
                             </p>
                         </div>
-                        <img src="./assets/img/preview-faq.webp" alt="preview da faq" class="img__menu">
+                        <img src="../assets/img/preview-faq.webp" alt="preview da faq" class="img__menu">
                     </a>
 
-                    <div class="panel solution-panel" id="panel-solucao">
-                        <a href="./pages/solucao.html" class="solution-block">
-                            <img src="./assets/img/preview-solucao.webp" alt="">
+                    <div class="panel solution-panel active" id="panel-solucao">
+                        <a href="./solucao.html" class="solution-block">
+                            <img src="../assets/img/preview-solucao.webp" alt="">
                             <h2>Atmos — Inteligência Espacial para Cidades Inteligentes</h2>
                             <p>Transformando dados orbitais, inteligência artificial e monitoramento urbano em prevenção, segurança e análise preditiva para o futuro das cidades.</p>
                         </a>
-                        <a href="./pages/solucao-dashboard.html" class="solution-block">
-                            <img src="./assets/img/preview-solucao-dashboard.png" alt="preview do dashboard de prevenção">
+                        <a href="./solucao-dashboard.html" class="solution-block">
+                            <img src="../assets/img/preview-solucao-dashboard.png" alt="preview do dashboard de prevenção">
                             <h2>Monitoramento Urbano em Tempo Real</h2>
                             <p>Visualize riscos climáticos, deformações urbanas e comportamento da cidade através de mapas inteligentes, inteligência artificial e tecnologia espacial.</p>
                         </a>
                     </div>
 
-                    <a href="./pages/contato.html" class="panel" id="panel-contato">
+                    <a href="./contato.html" class="panel" id="panel-contato">
                         <div class="menu-top">
                             <h2 class="panel-title">Contato Atmos</h2>
                             <p class="panel-subtitle">
@@ -93,7 +92,7 @@
                                 Entre em contato com nossa equipe e participe da evolução da inteligência urbana.
                             </p>
                         </div>
-                        <img src="./assets/img/preview-contato.webp" alt="preview da contato" class="img__menu">
+                        <img src="../assets/img/preview-contato.webp" alt="preview da contato" class="img__menu">
                     </a>
 
                 </div>
@@ -107,10 +106,10 @@
                 <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal">x</button>
                 <div class="container__modal-login">
                     <div class="login__content-left">
-                        <img src="./assets/img/login-satelite-sar.jpg" alt="Scan de um Sar" class="login-image">
+                        <img src="../assets/img/login-satelite-sar.jpg" alt="Scan de um Sar" class="login-image">
                     </div>
                     <div class="login__content-right">
-                        <img src="./assets/img/logo2.png" alt="logo atmos" class="icon-login">
+                        <img src="../assets/img/logo2.png" alt="logo atmos" class="icon-login">
                         <form action="." class="login-forms">
                             <h2 class="login__title">Crie sua conta</h2>
                             <p class="login__subtitle">Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de tecnologia espacial, inteligência artificial e monitoramento climático avançado.</p>
@@ -159,14 +158,6 @@
                     </div>
                 </div>
             </dialog>
-        </section>
-        <section class="hero">
-            <div class="container__div">
-                <div class="container__div-content">
-                    <h1 class="hero__main-title">Inteligência espacial para cidades mais seguras.</h1>
-                    <p class="hero__main-subtitle">Monitoramento urbano em tempo real com dados de satélites, clima, sensores e IA avançada.</p>
-                </div>
-            </div>
         </section>
     </main>
 </body>
