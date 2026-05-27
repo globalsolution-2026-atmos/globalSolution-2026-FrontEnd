@@ -3,6 +3,7 @@
 }
 
 .menu__open.active {
+    animation: fadeSlide 0.35s ease forwards;
     position: fixed;
     width: 100%;
     height: 45vh;
@@ -13,6 +14,14 @@
     backdrop-filter: blur(1.6rem) saturate(140%);
     -webkit-backdrop-filter: blur(1.6rem) saturate(140%);
     font-size: 1.6rem;
+}
+
+.redirect {
+    font-style: normal;
+}
+
+.redirect.active {
+    border-bottom: dashed;
 }
 
 .content__menu {
@@ -57,6 +66,7 @@
     border: .1rem solid rgba(255, 255, 255, .12);
     border-radius: .8rem;
     background-color: rgba(255, 255, 255, .03);
+    animation: panelFade .28s ease forwards;
     transition:
         background-color .2s ease,
         border-color .2s ease,
@@ -90,7 +100,8 @@
 .solution-block {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    gap: .9rem;
+    justify-content: flex-start;
     min-height: 100%;
     padding: 1.6rem;
     border: .1rem solid rgba(255, 255, 255, .12);
@@ -101,6 +112,16 @@
         background-color .2s ease,
         border-color .2s ease,
         transform .2s ease;
+}
+
+.solution-block img {
+    display: block;
+    width: 100%;
+    height: 21rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: .6rem;
+    padding-bottom: 20px;
 }
 
 .solution-block:hover,
@@ -116,7 +137,6 @@
 }
 
 .solution-block p {
-    margin-top: .8rem;
     font-size: 1.3rem;
     line-height: 1.4;
     opacity: .82;
@@ -151,4 +171,30 @@
     object-fit: cover;
     object-position: center;
     border-radius: .8rem;
+}
+
+#panel-contato .img__menu {
+    object-position: 52% 42%;
+}
+
+@keyframes panelFade {
+    from {
+        opacity: 0;
+        transform: translateY(.8rem) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
