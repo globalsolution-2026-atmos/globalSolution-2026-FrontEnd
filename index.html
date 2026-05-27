@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/base/import.css">
     <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+    <script src="./assets/js/menu.js" defer></script>
     <title>Home</title>
 </head>
 <body class="page__home">
@@ -13,13 +14,84 @@
             <button class="menu__expand" type="button">
                 <span class="menu-btn">Menu</span>
             </button>
-            <div class="atmos-logo">
+            <a href="./index.html" class="atmos-logo">
                 <img src="./assets/img/logo2.png" alt="logo atmos">
-            </div>
+            </a>
             <a href="" class="main-button" target="_blank">
                 <span>Acessar Plataforma</span>
                 <div class="glow"></div>
             </a>
+        </div>
+
+        <div class="menu__open">
+            <div class="content__menu">
+                <nav class="menu-left">
+                    <a href="#" class="redirect active" data-panel="home">Home</a>
+                    <a href="#" class="redirect" data-panel="equipe">Equipe</a>
+                    <a href="#" class="redirect" data-panel="faq">FAQ</a>
+                    <a href="#" class="redirect" data-panel="solucao">Solução</a>
+                    <a href="#" class="redirect" data-panel="contato">Contato</a>
+                </nav>
+                <div class="menu-right">
+
+                    <a href="./index.html" class="panel active" id="panel-home">
+                        <div class="menu-top">
+                            <h2 class="panel-title">Home</h2>
+                            <p class="panel-subtitle">
+                                Tecnologia espacial aplicada ao cotidiano urbano.
+                                A Atmos conecta satélites, mapas inteligentes e inteligência artificial
+                                para monitorar cidades em tempo real com precisão, velocidade e visão estratégica.
+                            </p>
+                        </div>
+                        <img src="./assets/img/iss073e0575226orig.webp" alt="preview da home" class="img__menu">
+                    </a>
+
+                    <a href="./pages/equipe.html" class="panel" id="panel-equipe">
+                        <div class="menu-top">
+                            <h2 class="panel-title">Nossa Equipe</h2>
+                            <p class="panel-subtitle">
+                                Uma equipe multidisciplinar apaixonada por tecnologia,
+                                dados e inovação. Trabalhamos juntos todos os dias
+                                para transformar cidades em ambientes mais inteligentes,
+                                seguros e sustentáveis.
+                            </p>
+                        </div>
+                        <img src="./assets/img/preview-equipe.png" alt="preview da equipe" class="img__menu">
+                    </a>
+
+                    <a href="#" class="panel" id="panel-faq">
+                        <div class="menu-top">
+                            <h2 class="panel-title"></h2>
+                            <p class="panel-subtitle">
+                                
+                            </p>
+                        </div>
+                        <img src="" alt="preview da faq" class="img__menu">
+                    </a>
+
+                    <div class="panel solution-panel" id="panel-solucao">
+                        <a href="#" class="solution-block">
+                            <h2>Monitoramento</h2>
+                            <p>Dados urbanos e climáticos em tempo real.</p>
+                        </a>
+                        <a href="#" class="solution-block">
+                            <h2>Prevenção</h2>
+                            <p>Alertas inteligentes para antecipar riscos.</p>
+                        </a>
+                    </div>
+
+                    <a href="#" class="panel" id="panel-contato">
+                        <div class="menu-top">
+                            <h2 class="panel-title"></h2>
+                            <p class="panel-subtitle">
+                                
+                            </p>
+                        </div>
+                        <img src="" alt="preview da contato" class="img__menu">
+                    </a>
+
+                </div>
+            </div>
         </div>
     </header>
 
