@@ -1,9 +1,11 @@
 const modal = document.querySelector('.modal-login');
-const btnModal = document.querySelector('.btn-login');
+const btnModals = document.querySelectorAll('.btn-login');
 const closeModal = document.querySelector('.modal__close');
 
-btnModal.addEventListener('click', () => {
-    modal.showModal();
+btnModals.forEach((btnModal) => {
+    btnModal.addEventListener('click', () => {
+        modal.showModal();
+    });
 });
 
 closeModal.addEventListener('click', () => {
