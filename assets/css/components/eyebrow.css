@@ -1,0 +1,15 @@
+.title-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    text-transform: uppercase;
+    color: var(--red);
+    font-size: 1.5rem;
+}
+
+.title-eyebrow::before {
+    content: "_";
+    display: inline-block;
+    line-height: 1;
+    transform: translateY(-.32em);
+}
