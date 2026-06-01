@@ -1,59 +1,41 @@
-.team-main {
-    padding-top: 6rem;
+.team__main {
+    padding-top: 0;
     background-color: var(--full-white);
     color: var(--space-black);
 }
 
-.team-hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(32rem, .8fr);
-    align-items: center;
-    gap: 5rem;
-    min-height: calc(100vh - 6rem);
-    padding: 8rem;
+.page__equipe .hero {
+    min-height: 0;
 }
 
-.team-hero__content {
+.hero__team-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 48rem;
+    padding: 12rem 8rem 7rem;
+    border-bottom: .1rem solid rgba(0, 0, 0, .16);
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, .82), rgba(0, 0, 0, .46), rgba(0, 0, 0, .18)),
+        url(../../img/equipe/preview-equipe.png) center / cover no-repeat;
+}
+
+.hero__title {
+    max-width: 84rem;
+    margin-top: 1.6rem;
+    color: var(--mist);
+    font-size: 6.4rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero__desc {
     max-width: 72rem;
-}
-
-.team-hero__eyebrow,
-.team-section__eyebrow {
-    margin-bottom: 1.6rem;
-    color: var(--red);
-    font-family: var(--font-bebas);
-    font-size: 1.5rem;
-    font-weight: 800;
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.team-hero__title {
-    color: var(--space-black);
-    font-size: 6rem;
-    font-weight: 800;
-    line-height: 1;
-    text-transform: uppercase;
-}
-
-.team-hero__text {
-    max-width: 64rem;
     margin-top: 2.4rem;
-    color: rgba(5, 8, 22, .76);
+    color: var(--ice-cloud);
     font-size: 1.8rem;
     line-height: 1.7;
-}
-
-.team-hero__media {
-    min-width: 0;
-}
-
-.team-hero__media img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    object-position: center;
 }
 
 .team-roles {
