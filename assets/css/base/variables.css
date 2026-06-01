@@ -1,0 +1,27 @@
+:root {
+    --font-manrope: 'Manrope', sans-serif;
+    --font-bebas: 'Barlow Condensed', sans-serif;
+    /* Backgrounds */
+    --full-black: #000;
+    --space-black: #050816;
+    --void: #0A0F1C;
+    --deep-orbit: #0D1326;
+    --night: #131A2B;
+    --full-white: #ffffff;
+
+    /* Surfaces */
+    --satellite: #1B2740;
+    --slate: #263248;
+    --linear-gradient: linear-gradient(0deg, #0b0b0f, rgb(41, 41, 41));
+
+    /* Text */
+    --ice-cloud: #D6E4FF;
+    --mist: #DCE7FF;
+    --red: #b32424;
+
+    /* Accents */
+    --electric-blue: #5EA2FF;
+    --glow-blue: #89B4FF;
+    --stellar-purple: #7D7CFF;
+    --glow-purple: #A5A6FF;
+}
