@@ -4,7 +4,7 @@
 }
 
 .hero__container {
-    background: url(../../img/iss073e0575226orig.webp) center/cover no-repeat;
+    background: url(../../img/home/iss073e0575226orig.webp) center/cover no-repeat;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -116,82 +116,6 @@
 
 
 
-.modules__grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    border-top: .1rem solid rgba(0, 0, 0, 0.16);
-    border-left: .1rem solid rgba(0, 0, 0, 0.16);
-}
-
-.modules__content {
-    min-width: 0;
-    border-right: .1rem solid rgba(0, 0, 0, 0.16);
-    border-bottom: .1rem solid rgba(0, 0, 0, 0.16);
-    padding: 3rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.modules__content::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg, #b324243a, #fff);
-    opacity: 0;
-    transition: opacity .3s ease;
-    z-index: 0;
-}
-
-.modules__content:hover::before{
-    opacity: 1;
-}
-
-.modules__content > * {
-    position: relative;
-    z-index: 1;
-}
-
-.modules__content::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: .2rem;
-    background: var(--red);
-    transition: width 0.4s ease;
-}
-
-
-.modules__content:hover::after {
-    width: 100%;
-}
-
-.module__number {
-    color: var(--red);
-    font-weight: 800;
-    font-size: 1.3rem;
-}
-
-.module__icon {
-    font-size: 2.8rem;
-}
-
-.module__title {
-    font-size: 2rem;
-    font-weight: 700;
-    width: 30%;
-    text-transform: uppercase;
-    color: var(--void);
-    margin: 2rem 0;
-    font-family: var(--font-bebas);
-}
-
-.module__desc {
-    font-size: 1.3rem;
-    color: var(--night)
-}
-
 .cases__head {
     margin: 8rem 6rem;
 }
@@ -274,7 +198,7 @@
 }
 
 .cta__pitch {
-    background-image: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url(../../img/satelite-sar.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url(../../img/home/satelite-sar.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
