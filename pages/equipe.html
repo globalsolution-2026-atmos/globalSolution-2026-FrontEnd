@@ -173,28 +173,66 @@
             </header>
 
             <div class="team-roles__grid">
-                <article class="modules__content">
+                <article class="modules__content modules__content--profile" data-creator-popup="pedro">
                     <span class="module__number">01 - participantes</span>
+                    <img src="../assets/img/equipe/foto-pedro.jpeg" alt="Foto do integrante Pedro Amaro" class="module__image">
                     <h3 class="module__title">Pedro Amaro Pires</h3>
-                    <p class="module__text">Organização e leitura de informações de satélites para gerar contexto urbano confiável.</p>
+                    <p class="module__text">💻 Sou um desenvolvedor em formação com interesse em criar soluções práticas e funcionais. Tenho experiência com projetos acadêmicos e pessoais, trabalhando principalmente com...</p>
+                    <div class="team__links">
+                            <a href="https://github.com/pedroamarop" target="_blank" rel="noopener noreferrer">
+                                <img src="../assets/img/equipe/github.png" alt="Github icon" class="team__link">
+                            </a>
+                            <a href="https://www.linkedin.com/in/pedro-amaro-pires/" target="_blank" rel="noopener noreferrer">
+                                <img src="../assets/img/equipe/linkedin.png" alt="LinkedIn icon" class="team__link">
+                            </a>
+                        </div>
                 </article>
 
-                <article class="modules__content">
+                <article class="modules__content modules__content--profile" data-creator-popup="matheus">
                     <span class="module__number">02 - participantes</span>
+                    <img src="../assets/img/equipe/foto-matheus.jpeg" alt="Foto do integrante Matheus Matsushita" class="module__image">
                     <h3 class="module__title">Matheus Matsushita de Souza</h3>
-                    <p class="module__text">Modelos e automações que ajudam a identificar riscos, padrões e mudanças no território.</p>
+                    <p class="module__text">Prazer, me chamo Matheus Matsushita de Souza, estou atrás de um emprego  que consiga me ajuda a crescer no mercado de trabalho e que eu consiga ajudar...</p>
+
+                    <div class="team__links">
+                            <a href="https://github.com/Matsushita1907" target="_blank" rel="noopener noreferrer">
+                                <img src="../assets/img/equipe/github.png" alt="Github icon" class="team__link">
+                            </a>
+                            <a href="https://www.linkedin.com/in/matheus-matsushita-de-souza-543269346/" target="_blank" rel="noopener noreferrer">
+                                <img src="../assets/img/equipe/linkedin.png" alt="LinkedIn icon" class="team__link">
+                            </a>
+                    </div>
                 </article>
 
-                <article class="modules__content">
+                <article class="modules__content modules__content--profile" data-creator-popup="juan">
                     <span class="module__number">03 - participantes</span>
-                    <h3 class="module__title">Juan Marques de Souza</h3>
-                    <p class="module__text">Interfaces claras para transformar análises complexas em decisões rápidas e acessíveis.</p>
+                    <img src="../assets/img/equipe/foto-juan.jpeg" alt="Foto do integrante Juan Marques" class="module__image">
+                    <h3 class="module__title">Juan Souza Marques</h3>
+                    <p class="module__text">Estudante de Análise e Desenvolvimento de Sistemas, atualmente focado em expandir conhecimentos em desenvolvimento de software e tecnologia. Dedicado ao aprendizado contínuo em Java, Python e AWS Cloud...</p>
+
+                    <div class="team__links">
+                            <a href="https://github.com/juansouzamarques" target="_blank" rel="noopener noreferrer">
+                                <img src="../assets/img/equipe/github.png" alt="Github icon" class="team__link">
+                            </a>
+                            <a href="https://www.linkedin.com/in/juan-marques-297b293b4/" target="_blank" rel="noopener noreferrer">
+                                <img src="../assets/img/equipe/linkedin.png" alt="LinkedIn icon" class="team__link">
+                            </a>
+                    </div>
                 </article>
 
-                <article class="modules__content">
+                <article class="modules__content modules__content--profile" data-creator-popup="lucas">
                     <span class="module__number">04 - participantes</span>
+                    <img src="../assets/img/equipe/foto-lucas.jpeg" alt="Foto do integrante Lucas Leite" class="module__image">
                     <h3 class="module__title">Lucas Leite Carlos</h3>
-                    <p class="module__text">Conexão entre tecnologia, prevenção e impacto público para apoiar cidades inteligentes.</p>
+                    <p class="module__text">Sou estudante de Análise e Desenvolvimento de Sistemas na FIAP, com interesse em tecnologia, programação e resolução de problemas. Atualmente estou desenvolvendo meus conhecimentos em lógica de programação...</p>
+                    <div class="team__links">
+                            <a href="https://github.com/Leite-1309" target="_blank" rel="noopener noreferrer">
+                                <img src="../assets/img/equipe/github.png" alt="Github icon" class="team__link">
+                            </a>
+                            <a href="https://www.linkedin.com/in/lucas-leite-carlos-5b72973a9/" target="_blank" rel="noopener noreferrer">
+                                <img src="../assets/img/equipe/linkedin.png" alt="LinkedIn icon" class="team__link">
+                            </a>
+                    </div>
                 </article>
             </div>
         </section>
@@ -224,5 +262,104 @@
             <p>Inteligência espacial para cidades mais seguras.</p>
         </div>
     </footer>
+
+    <div class="popup" id="popup-creators">
+        <div class="popup__overlay"></div>
+
+        <!-- Detalhes do criador Pedro -->
+        <div class="popup__card" data-creator-popup="pedro">
+            <button class="popup__close">&times;</button>
+            <img src="../assets/img/equipe/foto-pedro.jpeg" alt="Foto de Pedro Amaro Pires" class="team__icon team__icon--pedro">
+            <p class="description">RM570636</p>
+            <div class="popup__team__card-box">
+                <h3 class="popup__team__card-label">Pedro Amaro Pires</h3>
+                <p class="popup__team__card-rm">1TDSPJ</p>
+                <div class="popup__team__card-text">
+                    <p>💻 Sou um desenvolvedor em formação com interesse em criar soluções práticas e funcionais. Tenho experiência com projetos acadêmicos e pessoais, trabalhando principalmente com:</p>
+                    <ul>
+                        <li>Desenvolvimento web (HTML, CSS, JS)</li>
+                        <li>Lógica de programação e orientação a objetos (Java)</li>
+                        <li>Ferramentas de edição e criação de conteúdo</li>
+                        <li>Automação e testes com diferentes softwares</li>
+                    </ul>
+                    <p>Gosto de entender como as coisas funcionam por trás e estou sempre buscando evoluir minhas habilidades técnicas.</p>
+                </div>
+                <div class="popup__team__links">
+                    <a href="https://github.com/pedroamarop" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/img/equipe/github.png" alt="Github icon" class="team__link">
+                    </a>
+                    <a href="https://www.linkedin.com/in/pedro-amaro-pires/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/img/equipe/linkedin.png" alt="LinkedIn icon" class="team__link">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detalhes do criador Juan -->
+        <div class="popup__card" data-creator-popup="juan">
+            <button class="popup__close">&times;</button>
+            <img src="../assets/img/equipe/foto-juan.jpeg" alt="Foto de Juan Souza Marques" class="team__icon team__icon--pedro">
+            <p class="description">RM573469</p>
+            <div class="popup__team__card-box">
+                <h3 class="popup__team__card-label">Juan Souza Marques</h3>
+                <p class="popup__team__card-rm">1TDSPJ</p>
+                <div class="popup__team__card-text">
+                    <p>Estudante de Análise e Desenvolvimento de Sistemas, atualmente focado em expandir conhecimentos em desenvolvimento de software e tecnologia. Dedicado ao aprendizado contínuo em Java, Python e AWS Cloud, com interesse em desenvolvimento backend, automação, soluções escaláveis e melhores práticas de programação. Apaixonado por tecnologia, resolução de problemas e crescimento profissional na área de TI.</p>
+                </div>
+                <div class="popup__team__links">
+                    <a href="https://github.com/juansouzamarques" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/img/equipe/github.png" alt="Github icon" class="team__link">
+                    </a>
+                    <a href="https://www.linkedin.com/in/juan-marques-297b293b4/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/img/equipe/linkedin.png" alt="LinkedIn icon" class="team__link">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detalhes do criador Lucas -->
+        <div class="popup__card" data-creator-popup="lucas">
+            <button class="popup__close">&times;</button>
+            <img src="../assets/img/equipe/foto-lucas.jpeg" alt="Foto de Lucas Leite Carlos" class="team__icon team__icon--pedro">
+            <p class="description">RM571985</p>
+            <div class="popup__team__card-box">
+                <h3 class="popup__team__card-label">Lucas Leite Carlos</h3>
+                <p class="popup__team__card-rm">1TDSPJ</p>
+                <div class="popup__team__card-text">
+                    <p>Sou estudante de Análise e Desenvolvimento de Sistemas na FIAP, com interesse em tecnologia, programação e resolução de problemas. Atualmente estou desenvolvendo meus conhecimentos em lógica de programação, desenvolvimento de sistemas e fundamentos de tecnologia, sempre buscando evoluir tanto tecnicamente quanto profissionalmente. Tenho facilidade para aprender, gosto de desafios e estou aberto(a) a oportunidades de estágio e projetos que me permitam aplicar na prática o que venho estudando</p>
+                </div>
+                <div class="popup__team__links">
+                    <a href="https://github.com/Leite-1309" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/img/equipe/github.png" alt="Github icon" class="team__link">
+                    </a>
+                    <a href="https://www.linkedin.com/in/lucas-leite-carlos-5b72973a9/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/img/equipe/linkedin.png" alt="LinkedIn icon" class="team__link">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detalhes do criador Matheus -->
+        <div class="popup__card" data-creator-popup="matheus">
+            <button class="popup__close">&times;</button>
+            <img src="../assets/img/equipe/foto-matheus.jpeg" alt="Foto de Matheus Matsushita de Souza" class="team__icon team__icon--pedro">
+            <p class="description">RM570017</p>
+            <div class="popup__team__card-box">
+                <h3 class="popup__team__card-label">Matheus Matsushita de Souza</h3>
+                <p class="popup__team__card-rm">1TDSPJ</p>
+                <div class="popup__team__card-text">
+                    <p>Estou em busca de uma nova oportunidade profissional onde eu possa aplicar meus conhecimentos, crescer junto com a equipe e contribuir com resultados reais. Faço ADS na instituição de ensino FIAP. Sou uma pessoa educada, racional e me dou muito bem trabalhando em equipe.  Estou aberto a vagas presenciais / híbridas / remotas Caso saiba de alguma oportunidade ou possa me indicar, estarei a disposição ! Pode entrar em contato comigo por aqui no Linkedin ou pelo e-mail: theus.matsu@gmail.com</p>
+                </div>
+                <div class="popup__team__links">
+                    <a href="https://github.com/Matsushita1907" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/img/equipe/github.png" alt="Github icon" class="team__link">
+                    </a>
+                    <a href="https://www.linkedin.com/in/matheus-matsushita-de-souza-543269346/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/img/equipe/linkedin.png" alt="LinkedIn icon" class="team__link">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
