@@ -33,9 +33,13 @@
     z-index: 1;
     width: min(90vw, 50rem);
     max-width: 500px;
-    max-height: 86vh;
-    overflow-y: auto;
     background-color: var(--full-white);
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .84), rgba(255, 255, 255, .9)),
+        url("../../img/login/login-satelite-sar.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border: 2px solid var(--full-black);
     color: var(--night);
     padding: 3rem;
@@ -112,4 +116,5 @@
 
 .popup__team__card-label {
     font-size: 2.5rem;
+    font-family: var(--font-bebas);
 }
