@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/base/import.css">
+    <link rel="icon" href="../assets/img/logos/favicon.svg" type="image/svg+xml">
     <script src="../assets/js/menu.js" defer></script>
     <script src="../assets/js/login-modal.js" defer></script>
     <title>Equipe</title>
@@ -11,11 +12,11 @@
 <body class="page__equipe">
     <header class="header">
         <div class="header__content">
-            <button class="menu__expand" type="button">
+            <button class="menu__expand" type="button" aria-controls="menu-principal" aria-expanded="false">
                 <span class="menu-btn">Menu</span>
             </button>
             <a href="../index.html" class="atmos-logo">
-                <img src="../assets/img/logo2.png" alt="logo atmos">
+                <img src="../assets/img/logos/logo2.png" alt="logo atmos">
             </a>
             <button type="button" class="main-button btn-login">
                 <span>Acessar Plataforma</span>
@@ -23,15 +24,15 @@
             </button>
         </div>
 
-        <div class="menu__open">
+        <div class="menu__open" id="menu-principal">
             <div class="content__menu">
-                <nav class="menu-left">
-                    <a href="#" class="redirect" data-panel="home">Home</a>
-                    <a href="#" class="redirect active" data-panel="equipe">Equipe</a>
-                    <a href="#" class="redirect" data-panel="faq">FAQ</a>
-                    <a href="#" class="redirect" data-panel="solucao">Solução</a>
-                    <a href="#" class="redirect" data-panel="contato">Contato</a>
-                </nav>
+                <div class="menu-left" role="group" aria-label="Prévia das páginas">
+                    <button class="redirect" type="button" data-panel="home" aria-controls="panel-home" aria-pressed="false">Home</button>
+                    <button class="redirect active" type="button" data-panel="equipe" aria-controls="panel-equipe" aria-pressed="true">Equipe</button>
+                    <button class="redirect" type="button" data-panel="faq" aria-controls="panel-faq" aria-pressed="false">FAQ</button>
+                    <button class="redirect" type="button" data-panel="solucao" aria-controls="panel-solucao" aria-pressed="false">Solução</button>
+                    <button class="redirect" type="button" data-panel="contato" aria-controls="panel-contato" aria-pressed="false">Contato</button>
+                </div>
                 <div class="menu-right">
 
                     <a href="../index.html" class="panel" id="panel-home">
@@ -43,7 +44,7 @@
                                 para monitorar cidades em tempo real com precisão, velocidade e visão estratégica.
                             </p>
                         </div>
-                        <img src="../assets/img/iss073e0575226orig.webp" alt="preview da home" class="img__menu">
+                        <img src="../assets/img/home/iss073e0575226orig.webp" alt="preview da home" class="img__menu">
                     </a>
 
                     <a href="./equipe.html" class="panel active" id="panel-equipe">
@@ -56,29 +57,29 @@
                                 seguros e sustentáveis.
                             </p>
                         </div>
-                        <img src="../assets/img/preview-equipe.png" alt="preview da equipe" class="img__menu">
+                        <img src="../assets/img/equipe/preview-equipe.png" alt="preview da equipe" class="img__menu">
                     </a>
 
                     <a href="./faq.html" class="panel" id="panel-faq">
                         <div class="menu-top">
                             <h2 class="panel-title">Nosso Faq</h2>
                             <p class="panel-subtitle">
-                            Tire dúvidas sobre a Atmos, nossa tecnologia e como utilizamos
-                            dados inteligentes para monitorar cidades em tempo real com
-                            precisão, segurança e eficiência.
+                                Tire dúvidas sobre a Atmos, nossa tecnologia e como utilizamos
+                                dados inteligentes para monitorar cidades em tempo real com
+                                precisão, segurança e eficiência.
                             </p>
                         </div>
-                        <img src="../assets/img/preview-faq.webp" alt="preview da faq" class="img__menu">
+                        <img src="../assets/img/faq/preview-faq.webp" alt="preview da faq" class="img__menu">
                     </a>
 
                     <div class="panel solution-panel" id="panel-solucao">
                         <a href="./solucao.html" class="solution-block">
-                            <img src="../assets/img/preview-solucao.webp" alt="">
+                            <img src="../assets/img/solucao/preview-solucao.webp" alt="preview da solução Atmos">
                             <h2>Atmos — Inteligência Espacial para Cidades Inteligentes</h2>
                             <p>Transformando dados orbitais, inteligência artificial e monitoramento urbano em prevenção, segurança e análise preditiva para o futuro das cidades.</p>
                         </a>
                         <a href="./solucao-dashboard.html" class="solution-block">
-                            <img src="../assets/img/preview-solucao-dashboard.png" alt="preview do dashboard de prevenção">
+                            <img src="../assets/img/solucao/preview-solucao-dashboard.png" alt="preview do dashboard de prevenção">
                             <h2>Monitoramento Urbano em Tempo Real</h2>
                             <p>Visualize riscos climáticos, deformações urbanas e comportamento da cidade através de mapas inteligentes, inteligência artificial e tecnologia espacial.</p>
                         </a>
@@ -92,7 +93,7 @@
                                 Entre em contato com nossa equipe e participe da evolução da inteligência urbana.
                             </p>
                         </div>
-                        <img src="../assets/img/preview-contato.webp" alt="preview da contato" class="img__menu">
+                        <img src="../assets/img/contato/preview-contato.webp" alt="preview da contato" class="img__menu">
                     </a>
 
                 </div>
@@ -100,65 +101,136 @@
         </div>
     </header>
 
-    <main>
-        <section class="login__section">
-            <dialog class="modal-login">
-                <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal">x</button>
-                <div class="container__modal-login">
-                    <div class="login__content-left">
-                        <img src="../assets/img/login-satelite-sar.jpg" alt="Scan de um Sar" class="login-image">
-                    </div>
-                    <div class="login__content-right">
-                        <img src="../assets/img/logo2.png" alt="logo atmos" class="icon-login">
-                        <form action="." class="login-forms">
-                            <h2 class="login__title">Crie sua conta</h2>
-                            <p class="login__subtitle">Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de tecnologia espacial, inteligência artificial e monitoramento climático avançado.</p>
-                            <div class="login-labels">
-                                <label for="name" class="login__label">
-                                    <span>NOME</span>
-                                    <input
+    <section class="login__section" aria-label="Acesso à plataforma">
+        <dialog class="modal-login">
+            <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal">x</button>
+            <div class="container__modal-login">
+                <div class="login__content-left">
+                    <img src="../assets/img/login/login-satelite-sar.jpg" alt="Scan de um SAR" class="login-image">
+                </div>
+                <div class="login__content-right">
+                    <img src="../assets/img/logos/logo2.png" alt="logo atmos" class="icon-login">
+                    <form action="." class="login-forms">
+                        <h2 class="login__title">Crie sua conta</h2>
+                        <p class="login__subtitle">Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de tecnologia espacial, inteligência artificial e monitoramento climático avançado.</p>
+                        <div class="login-labels">
+                            <label for="name" class="login__label">
+                                <span>NOME</span>
+                                <input
                                     class="login__input login-name"
                                     id="name"
                                     name="name"
                                     type="text"
                                     placeholder="Seu nome Completo:"
-                                    >
-                                </label>
-                                <label for="email" class="login__label">
-                                    <span>EMAIL</span>
-                                    <input
+                                >
+                            </label>
+                            <label for="email" class="login__label">
+                                <span>EMAIL</span>
+                                <input
                                     name="email"
                                     class="login__input login-email"
                                     id="email"
                                     type="email"
                                     placeholder="seu@email.com"
-                                    >
-                                </label>
-                                <label for="senha" class="login__label">
-                                    <span>SENHA</span>
-                                    <input
+                                >
+                            </label>
+                            <label for="senha" class="login__label">
+                                <span>SENHA</span>
+                                <input
                                     class="login__input login-senha"
                                     id="senha"
                                     name="senha"
                                     type="password"
                                     placeholder="Senha"
-                                    >
-                                </label>
-                            </div>
-                            <button
-                                class="main-button
-                                login__btn submit-btn"
-                                id="submit-btn"
-                                type="button"
                                 >
-                                    <span>Conectar-se</span>
-                                    <div class="glow"></div>
-                            </button>
-                        </form>
-                    </div>
+                            </label>
+                        </div>
+                        <button
+                            class="main-button login__btn submit-btn"
+                            id="submit-btn"
+                            type="button"
+                        >
+                            <span>Conectar-se</span>
+                            <div class="glow"></div>
+                        </button>
+                    </form>
                 </div>
-            </dialog>
+            </div>
+        </dialog>
+    </section>
+
+    <main class="team-main">
+        <section class="team-hero" aria-labelledby="team-title">
+            <div class="team-hero__content">
+                <p class="team-hero__eyebrow">Equipe Atmos</p>
+                <h1 class="team-hero__title" id="team-title">Pessoas conectando dados espaciais a decisões urbanas.</h1>
+                <p class="team-hero__text">
+                    Unimos tecnologia, análise e visão de produto para transformar imagens de satélite,
+                    mapas inteligentes e inteligência artificial em soluções úteis para cidades mais seguras.
+                </p>
+            </div>
+            <figure class="team-hero__media">
+                <img src="../assets/img/equipe/preview-equipe.png" alt="Representação visual da equipe Atmos analisando dados urbanos">
+            </figure>
+        </section>
+
+        <section class="team-roles" aria-labelledby="team-roles-title">
+            <header class="team-section__header">
+                <p class="team-section__eyebrow">Frentes de trabalho</p>
+                <h2 class="team-section__title" id="team-roles-title">Uma equipe integrada do dado à experiência.</h2>
+            </header>
+
+            <div class="team-roles__grid">
+                <article class="modules__content">
+                    <span class="module__number">01 - participantes</span>
+                    <h3 class="module__title">Pedro Amaro Pires</h3>
+                    <p class="module__text">Organização e leitura de informações de satélites para gerar contexto urbano confiável.</p>
+                </article>
+
+                <article class="modules__content">
+                    <span class="module__number">02 - participantes</span>
+                    <h3 class="module__title">Matheus Matsushita de Souza</h3>
+                    <p class="module__text">Modelos e automações que ajudam a identificar riscos, padrões e mudanças no território.</p>
+                </article>
+
+                <article class="modules__content">
+                    <span class="module__number">03 - participantes</span>
+                    <h3 class="module__title">Juan Marques de Souza</h3>
+                    <p class="module__text">Interfaces claras para transformar análises complexas em decisões rápidas e acessíveis.</p>
+                </article>
+
+                <article class="modules__content">
+                    <span class="module__number">04 - participantes</span>
+                    <h3 class="module__title">Lucas Leite Carlos</h3>
+                    <p class="module__text">Conexão entre tecnologia, prevenção e impacto público para apoiar cidades inteligentes.</p>
+                </article>
+            </div>
         </section>
     </main>
+
+    <footer class="footer" aria-label="Rodapé">
+        <div class="footer__content">
+            <nav class="footer__nav" aria-label="Navegação do rodapé">
+                <a href="../index.html">Home</a>
+                <a href="./equipe.html" aria-current="page">Equipe</a>
+                <a href="./faq.html">FAQ</a>
+                <a href="./solucao.html">Solução</a>
+                <a href="./contato.html">Contato</a>
+            </nav>
+
+            <a href="../index.html" class="footer__logo" aria-label="Voltar para a página inicial da Atmos">
+                <img src="../assets/img/logos/logo2.png" alt="Atmos">
+            </a>
+
+            <button type="button" class="main-button btn-login">
+                <span>Acessar Plataforma</span>
+                <div class="glow"></div>
+            </button>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Atmos. Todos os direitos reservados.</p>
+            <p>Inteligência espacial para cidades mais seguras.</p>
+        </div>
+    </footer>
 </body>
 </html>
