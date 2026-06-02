@@ -13,6 +13,7 @@
     --satellite: #1B2740;
     --slate: #263248;
     --linear-gradient: linear-gradient(0deg, #0b0b0f, rgb(41, 41, 41));
+    --dark-gradient: linear-gradient(0deg, #0b0b0f, rgb(26, 26, 26));
 
     /* Text */
     --ice-cloud: #D6E4FF;
