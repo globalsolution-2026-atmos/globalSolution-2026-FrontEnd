@@ -8,7 +8,7 @@ if (popupCreators) {
     const overlayCreators = popupCreators.querySelector(".popup__overlay");
     const botoesFechar = popupCreators.querySelectorAll(".popup__close");
     const cardsCreators = document.querySelectorAll(".team-roles__grid [data-creator-popup]");
-    const popupCards = popupCreators.querySelectorAll("[data-creator-popup]");
+    const popupCards = popupCreators.querySelectorAll(".popup__card");
     let ultimoCardFocado = null;
 
     // Abre o popup do criador escolhido.
