@@ -1,10 +1,14 @@
 .modal-login {
-    position: relative;
+    position: fixed;
     margin: 0 auto;
+    border: none;
     align-self: center;
     overflow: hidden;
-    width: min(82vw, 86rem);
+    width: min(300vw, 135rem);
+    height: 90rem;
     padding: 2.4rem;
+    background: var(--dark-gradient);
+    color: var(--mist)
 }
 
 .modal-login::backdrop {
@@ -19,7 +23,7 @@
     right: 1.6rem;
     background: none;
     border: 0;
-    color: var(--night);
+    color: var(--mist);
     cursor: pointer;
     font-size: 1.8rem;
     line-height: 1;
@@ -27,26 +31,30 @@
 
 .container__modal-login {
     display: flex;
+    height: 100%;
     flex-direction: row;
-    height: 60vh;
 }
 
 .login__content-right {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 2rem 3rem;
     width: 50%;
 }
 
 .login-forms {
     display: flex;
-    flex: 1;
     flex-direction: column;
+    width: 100%;
+    max-width: 48rem;
 }
 
 .login__title {
     font-size: 3.5rem;
     width: fit-content;
+    margin: 2rem 0;
 }
 
 .login__subtitle {
@@ -55,7 +63,8 @@
 }
 
 .login__content-left {
-    width: 40%;
+    position: relative;
+    width: 60%;
     height: 100%;
     overflow: hidden;
 }
@@ -65,17 +74,39 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: blur(2px) brightness(50%);
+}
+
+.login-forms .title-eyebrow {
+    color: var(--full-white);
+}
+.login-forms .title-eyebrow::before {
+    content: none;
 }
 
 .login-labels {
     display: flex;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 6rem 0;
     gap: 1.2rem;
 }
 
 .icon-login {
-    width: 60px;
+    position: absolute;
+    align-self: center;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 30rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter:
+        drop-shadow(0 0 6rem rgba(0, 0, 0, .95))
+        drop-shadow(0 0 10rem rgba(0, 0, 0, .8));
+}
+
+.login__label {
+    position: relative;
 }
 
 .login__label span{
@@ -83,22 +114,64 @@
     font-weight: 600;
 }
 
+.input-icon {
+    position: absolute;
+    left: 1.4rem;
+    bottom: 1.6rem;
+    color: var(--mist);
+    font-size: 1.4rem;
+    opacity: .72;
+    z-index: 2;
+}
+
+.password-show {
+    right: 1.4rem;
+    bottom: 1.6rem;
+    left: auto;
+    cursor: pointer;
+}
+
 .login__input {
     display:flex;
     width: 100%;
     flex-direction: column;
-    padding: .5rem 1rem;
+    padding: 1.5rem 3.8rem;
     border-radius: 10px;
-    border: 1px solid black
+    border: none;
+    background: none;
+    color: var(--mist);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        1px 0 0 rgba(255, 255, 255, 0.08) inset,
+        -1px 0 0 rgba(0, 0, 0, 0.2) inset;
+    outline: none;
+    transition: box-shadow .2s ease;
+}
+
+.login-name {
+    padding-left: 3.8rem;
+}
+
+.login__input:focus {
+    box-shadow:
+        0 0 0 2px rgba(214, 228, 255, 0.34),
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        1px 0 0 rgba(255, 255, 255, 0.08) inset,
+        -1px 0 0 rgba(0, 0, 0, 0.2) inset;
 }
 
 .login__input.input__error {
-    border-color: var(--red);
-    border-width: 2px;
+    box-shadow:
+        0 0 0 2px var(--red),
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        1px 0 0 rgba(255, 255, 255, 0.08) inset,
+        -1px 0 0 rgba(0, 0, 0, 0.2) inset;
 }
 
 .login__btn {
     padding: 2rem 0;
-    margin-top: auto;
     width: 100%;
 }
