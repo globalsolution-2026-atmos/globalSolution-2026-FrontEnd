@@ -79,8 +79,24 @@ if (submitBtn && name && email && senha && modal) {
         }
 
         console.log(result.ticket);
-        alert("Ticket de FAQ registrado, cheque o console.");
+        alert("Login efetuado, cheque o console.");
         modal.close();
 
+    });
+}
+
+
+const eyeIcon = document.querySelector(".password-show");
+const password = document.querySelector(".login-senha");
+
+if (eyeIcon && password) {
+    eyeIcon.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        const passwordIsVisible = password.type === "text";
+        password.type = passwordIsVisible ? "password" : "text";
+
+        eyeIcon.classList.toggle("fa-eye", !passwordIsVisible);
+        eyeIcon.classList.toggle("fa-eye-slash", passwordIsVisible);
     });
 }
