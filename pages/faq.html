@@ -101,58 +101,67 @@
     </header>
 
     <main>
-        <section class="login__section">
+        <section class="login__section" aria-label="Acesso à plataforma">
             <dialog class="modal-login">
                 <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal">x</button>
                 <div class="container__modal-login">
                     <div class="login__content-left">
-                        <img src="../assets/img/login/login-satelite-sar.jpg" alt="Scan de um Sar" class="login-image">
+                        <img src="../assets/img/logos/logo2.png" alt="logo atmos" class="icon-login">
+                        <img src="../assets/img/login/login-satelite-sar.jpg" alt="Scan de um SAR" class="login-image">
                     </div>
                     <div class="login__content-right">
-                        <img src="../assets/img/logos/logo2.png" alt="logo atmos" class="icon-login">
-                        <form action="." class="login-forms">
+                        <form action="." class="login-forms" autocomplete="off">
+                            <p class="title-eyebrow">Seja bem-vindo à atmos</p>
                             <h2 class="login__title">Crie sua conta</h2>
                             <p class="login__subtitle">Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de tecnologia espacial, inteligência artificial e monitoramento climático avançado.</p>
                             <div class="login-labels">
                                 <label for="name" class="login__label">
                                     <span>NOME</span>
+                                    <i class="fa-solid fa-user input-icon"></i>
                                     <input
                                     class="login__input login-name"
                                     id="name"
                                     name="name"
                                     type="text"
                                     placeholder="Seu nome Completo:"
+                                    autocomplete="off"
                                     >
                                 </label>
                                 <label for="email" class="login__label">
                                     <span>EMAIL</span>
+                                    <i class="fa-regular fa-envelope input-icon"></i>
                                     <input
                                     name="email"
                                     class="login__input login-email"
                                     id="email"
                                     type="email"
                                     placeholder="seu@email.com"
+                                    autocomplete="off"
                                     >
                                 </label>
                                 <label for="senha" class="login__label">
                                     <span>SENHA</span>
+                                    <i class="fa-solid fa-lock input-icon"></i>
                                     <input
                                     class="login__input login-senha"
                                     id="senha"
                                     name="senha"
                                     type="password"
                                     placeholder="Senha"
+                                    autocomplete="off"
+                                    autocorrect="off"
+                                    autocapitalize="off"
+                                    spellcheck="false"
                                     >
+                                    <i class="fa-regular fa-eye-slash input-icon password-show"></i>
                                 </label>
                             </div>
                             <button
-                                class="main-button
-                                login__btn submit-btn"
+                                class="alt-button login__btn submit-btn"
                                 id="submit-btn"
                                 type="button"
                                 >
                                     <span>Conectar-se</span>
-                                    <div class="glow"></div>
                             </button>
                         </form>
                     </div>
