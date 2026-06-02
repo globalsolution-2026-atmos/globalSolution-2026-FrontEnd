@@ -1,0 +1,185 @@
+.accordion {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 1.8rem;
+    color: var(--mist);
+    background:
+        linear-gradient(180deg, rgba(17, 19, 24, .96), rgba(5, 8, 22, .98));
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        1px 0 0 rgba(255, 255, 255, 0.08) inset,
+        -1px 0 0 rgba(0, 0, 0, 0.2) inset,
+        0 4px 16px rgba(0, 0, 0, 0.5),
+        0 1px 3px rgba(0, 0, 0, 0.6);
+    transition:
+        transform .25s ease,
+        filter .25s ease,
+        box-shadow .25s ease;
+}
+
+.accordion::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    z-index: -1;
+    background:
+        linear-gradient(180deg, rgba(41, 41, 41, 0.08), transparent 32%),
+        var(--dark-gradient);
+}
+
+.accordion:hover,
+.accordion[open] {
+    filter: brightness(1.08);
+    transform: translateY(-.2rem);
+}
+
+.accordion[open] {
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        1px 0 0 rgba(255, 255, 255, 0.08) inset,
+        -1px 0 0 rgba(0, 0, 0, 0.2) inset,
+        0 1.8rem 4rem rgba(0, 0, 0, .36),
+        0 0 0 .1rem rgba(165, 166, 255, .35),
+        0 0 3rem rgba(125, 124, 255, .18);
+}
+
+.accordion__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    min-height: 6.4rem;
+    padding: 1.4rem 2rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.accordion__trigger::-webkit-details-marker {
+    display: none;
+}
+
+.accordion__trigger::marker {
+    content: "";
+}
+
+.accordion__trigger:focus-visible {
+    outline: .2rem solid rgba(165, 166, 255, .72);
+    outline-offset: -.6rem;
+}
+
+.accordion__summary {
+    display: grid;
+    gap: .8rem;
+}
+
+.accordion__title {
+    color: var(--full-white);
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.accordion__icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 999px;
+    color: var(--mist);
+    background: rgba(255, 255, 255, .06);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        0 1rem 2rem rgba(0, 0, 0, .26);
+    transition:
+        color .25s ease,
+        transform .25s ease,
+        background .25s ease;
+}
+
+.accordion[open] .accordion__icon {
+    color: var(--glow-purple);
+    background: rgba(125, 124, 255, .16);
+    transform: rotate(180deg);
+}
+
+.accordion__content {
+    position: relative;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    opacity: 0;
+    transform: translateY(-.8rem);
+    transition:
+        max-height .36s ease,
+        padding .36s ease,
+        opacity .24s ease,
+        transform .36s ease;
+}
+
+.accordion[open] .accordion__content {
+    max-height: 32rem;
+    padding: 0 2rem 2rem;
+    opacity: 1;
+    transform: translateY(0);
+    animation: accordionSlide .36s cubic-bezier(.22, 1, .36, 1);
+}
+
+.accordion__content::before {
+    content: "";
+    display: block;
+    height: .1rem;
+    margin-bottom: 1.8rem;
+    background: linear-gradient(90deg, rgba(165, 166, 255, .45), rgba(255, 255, 255, .08), transparent);
+}
+
+.accordion__content p {
+    max-width: 76rem;
+    color: rgba(220, 231, 255, .82);
+    font-size: 1.35rem;
+    line-height: 1.8;
+}
+
+@keyframes accordionSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-.8rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 560px) {
+    .accordion__trigger {
+        align-items: flex-start;
+        min-height: 5.8rem;
+        padding: 1.3rem 1.5rem;
+    }
+
+    .accordion__title {
+        font-size: 1.4rem;
+    }
+
+    .accordion__icon {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    .accordion__content,
+    .accordion[open] .accordion__content {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
