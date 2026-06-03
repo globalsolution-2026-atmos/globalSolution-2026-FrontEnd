@@ -127,7 +127,7 @@
 }
 
 .accordion[open] .accordion__content {
-    max-height: 32rem;
+    max-height: 48rem;
     padding: 0 2rem 2rem;
     opacity: 1;
     transform: translateY(0);
@@ -147,6 +147,15 @@
     color: rgba(220, 231, 255, .82);
     font-size: 1.35rem;
     line-height: 1.8;
+}
+
+.accordion__content ul {
+    display: grid;
+    gap: .45rem;
+    margin: .8rem 0 1rem 1.8rem;
+    color: rgba(220, 231, 255, .82);
+    font-size: 1.35rem;
+    line-height: 1.7;
 }
 
 @keyframes accordionSlide {
