@@ -3,362 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home — Atmos</title>
     <link rel="stylesheet" href="./assets/css/base/import.css">
     <link rel="icon" href="./assets/img/logos/favicon.svg" type="image/svg+xml">
     <script src="./assets/js/components/menu.js" defer></script>
     <script src="./assets/js/components/login-modal.js" defer></script>
-    <title>Home</title>
 </head>
 <body class="page__home">
-    <header class="header">
+
+    <!-- ── Header ── -->
+    <header class="header" role="banner">
         <div class="header__content">
-            <button class="menu__expand" type="button">
-                <span class="menu-btn">Menu</span>
+            <button class="menu__expand" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu">
+                <span class="menu-btn" aria-hidden="true">Menu</span>
             </button>
-            <a href="./index.html" class="atmos-logo">
-                <img src="./assets/img/logos/logo2.png" alt="logo atmos">
+            <a href="./index.html" class="atmos-logo" aria-label="Atmos — Página inicial">
+                <img src="./assets/img/logos/logo2.png" alt="Atmos">
             </a>
-            <button type="button" class="main-button btn-login">
+            <button type="button" class="main-button btn-login" aria-haspopup="dialog">
                 <span>Acessar Plataforma</span>
-                <div class="glow"></div>
+                <div class="glow" aria-hidden="true"></div>
             </button>
         </div>
 
-        <div class="menu__open">
+        <nav class="menu__open" id="main-menu" aria-label="Menu principal">
             <div class="content__menu">
-                <nav class="menu-left">
-                    <a href="#" class="redirect active" data-panel="home">Home</a>
-                    <a href="#" class="redirect" data-panel="equipe">Equipe</a>
-                    <a href="#" class="redirect" data-panel="faq">FAQ</a>
-                    <a href="#" class="redirect" data-panel="solucao">Solução</a>
-                    <a href="#" class="redirect" data-panel="contato">Contato</a>
-                </nav>
+                <ul class="menu-left" role="list">
+                    <li><a href="#" class="redirect active" data-panel="home" aria-current="page">Home</a></li>
+                    <li><a href="#" class="redirect" data-panel="equipe">Equipe</a></li>
+                    <li><a href="#" class="redirect" data-panel="faq">FAQ</a></li>
+                    <li><a href="#" class="redirect" data-panel="solucao">Solução</a></li>
+                    <li><a href="#" class="redirect" data-panel="contato">Contato</a></li>
+                </ul>
                 <div class="menu-right">
-
-                    <a href="./index.html" class="panel active" id="panel-home">
+                    <a href="./index.html" class="panel active" id="panel-home" aria-current="page">
                         <div class="menu-top">
                             <h2 class="panel-title">Home</h2>
-                            <p class="panel-subtitle">
-                                Tecnologia espacial aplicada ao cotidiano urbano.
-                                A Atmos conecta satélites, mapas inteligentes e inteligência artificial
-                                para monitorar cidades em tempo real com precisão, velocidade e visão estratégica.
-                            </p>
+                            <p class="panel-subtitle">Tecnologia espacial aplicada ao cotidiano urbano. A Atmos conecta satélites, mapas inteligentes e inteligência artificial para monitorar cidades em tempo real.</p>
                         </div>
-                        <img src="./assets/img/home/iss073e0575226orig.webp" alt="preview da home" class="img__menu">
+                        <img src="./assets/img/home/iss073e0575226orig.webp" alt="Vista orbital de cidade à noite" class="img__menu">
                     </a>
-
                     <a href="./pages/equipe.html" class="panel" id="panel-equipe">
                         <div class="menu-top">
                             <h2 class="panel-title">Nossa Equipe</h2>
-                            <p class="panel-subtitle">
-                                Uma equipe multidisciplinar apaixonada por tecnologia,
-                                dados e inovação. Trabalhamos juntos todos os dias
-                                para transformar cidades em ambientes mais inteligentes,
-                                seguros e sustentáveis.
-                            </p>
+                            <p class="panel-subtitle">Uma equipe multidisciplinar apaixonada por tecnologia, dados e inovação para transformar cidades em ambientes mais inteligentes e sustentáveis.</p>
                         </div>
-                        <img src="./assets/img/equipe/preview-equipe.png" alt="preview da equipe" class="img__menu">
+                        <img src="./assets/img/equipe/preview-equipe.png" alt="Foto da equipe Atmos" class="img__menu">
                     </a>
-
                     <a href="./pages/faq.html" class="panel" id="panel-faq">
                         <div class="menu-top">
-                            <h2 class="panel-title">Nosso Faq</h2>
-                            <p class="panel-subtitle">
-                                Tire dúvidas sobre a Atmos, nossa tecnologia e como utilizamos
-                                dados inteligentes para monitorar cidades em tempo real com
-                                precisão, segurança e eficiência.
-                            </p>
+                            <h2 class="panel-title">FAQ</h2>
+                            <p class="panel-subtitle">Tire dúvidas sobre a Atmos e como utilizamos dados inteligentes para monitorar cidades em tempo real com precisão e segurança.</p>
                         </div>
-                        <img src="./assets/img/faq/preview-faq.webp" alt="preview da faq" class="img__menu">
+                        <img src="./assets/img/faq/preview-faq.webp" alt="Preview da página de FAQ" class="img__menu">
                     </a>
-
                     <div class="panel solution-panel" id="panel-solucao">
                         <a href="./pages/solucao.html" class="solution-block">
-                            <img src="./assets/img/solucao/preview-solucao.webp" alt="">
+                            <img src="./assets/img/solucao/preview-solucao.webp" alt="Preview da solução Atmos">
                             <h2>Atmos — Inteligência Espacial para Cidades Inteligentes</h2>
-                            <p>Transformando dados orbitais, inteligência artificial e monitoramento urbano em prevenção, segurança e análise preditiva para o futuro das cidades.</p>
+                            <p>Dados orbitais, IA e monitoramento urbano em prevenção, segurança e análise preditiva.</p>
                         </a>
                         <a href="./pages/solucao-dashboard.html" class="solution-block">
-                            <img src="./assets/img/solucao/preview-solucao-dashboard.png" alt="preview do dashboard de prevenção">
+                            <img src="./assets/img/solucao/preview-solucao-dashboard.png" alt="Preview do dashboard de prevenção">
                             <h2>Monitoramento Urbano em Tempo Real</h2>
-                            <p>Visualize riscos climáticos, deformações urbanas e comportamento da cidade através de mapas inteligentes, inteligência artificial e tecnologia espacial.</p>
+                            <p>Visualize riscos climáticos e deformações urbanas via mapas inteligentes e tecnologia espacial.</p>
                         </a>
                     </div>
-
                     <a href="./pages/contato.html" class="panel" id="panel-contato">
                         <div class="menu-top">
-                            <h2 class="panel-title">Contato Atmos</h2>
-                            <p class="panel-subtitle">
-                                Estamos construindo uma nova forma de compreender cidades através da tecnologia espacial.
-                                Entre em contato com nossa equipe e participe da evolução da inteligência urbana.
-                            </p>
+                            <h2 class="panel-title">Contato</h2>
+                            <p class="panel-subtitle">Entre em contato com nossa equipe e participe da evolução da inteligência urbana.</p>
                         </div>
-                        <img src="./assets/img/contato/preview-contato.webp" alt="preview da contato" class="img__menu">
+                        <img src="./assets/img/contato/preview-contato.webp" alt="Preview da página de contato" class="img__menu">
                     </a>
-
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <section class="login__section" aria-label="Acesso à plataforma">
-        <dialog class="modal-login">
-            <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal">x</button>
+    <main>
+
+        <!-- ── Modal de login ── -->
+        <dialog class="modal-login" aria-labelledby="modal-title" aria-modal="true">
+            <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal">
+                <span aria-hidden="true">×</span>
+            </button>
             <div class="container__modal-login">
-                <div class="login__content-left">
-                    <img src="./assets/img/logos/logo2.png" alt="logo atmos" class="icon-login">
-                    <img src="./assets/img/login/login-satelite-sar.jpg" alt="Scan de um SAR" class="login-image">
+                <div class="login__content-left" aria-hidden="true">
+                    <img src="./assets/img/logos/logo2.png" alt="">
+                    <img src="./assets/img/login/login-satelite-sar.jpg" alt="">
                 </div>
                 <div class="login__content-right">
-                    <form action="." class="login-forms" autocomplete="off">
-                        <p class="title-eyebrow">Seja bem-vindo à atmos</p>
-                        <h2 class="login__title">Crie sua conta</h2>
-                        <p class="login__subtitle">Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de tecnologia espacial, inteligência artificial e monitoramento climático avançado.</p>
+                    <form class="login-forms" autocomplete="off" novalidate>
+                        <p class="title-eyebrow">Seja bem-vindo à Atmos</p>
+                        <h2 class="login__title" id="modal-title">Crie sua conta</h2>
+                        <p class="login__subtitle">Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de tecnologia espacial e inteligência artificial.</p>
                         <div class="login-labels">
                             <label for="name" class="login__label">
-                                <span>NOME</span>
-                                <i class="fa-solid fa-user input-icon"></i>
-                                <input
-                                    class="login__input login-name"
-                                    id="name"
-                                    name="name"
-                                    type="text"
-                                    placeholder="Seu nome Completo:"
-                                    autocomplete="off"
-                                >
+                                <span>Nome</span>
+                                <i class="fa-solid fa-user input-icon" aria-hidden="true"></i>
+                                <input class="login__input" id="name" name="name" type="text" placeholder="Seu nome completo" autocomplete="name">
                             </label>
                             <label for="email" class="login__label">
-                                <span>EMAIL</span>
-                                <i class="fa-regular fa-envelope input-icon"></i>
-                                <input
-                                    name="email"
-                                    class="login__input login-email"
-                                    id="email"
-                                    type="email"
-                                    placeholder="seu@email.com"
-                                    autocomplete="off"
-                                >
+                                <span>E-mail</span>
+                                <i class="fa-regular fa-envelope input-icon" aria-hidden="true"></i>
+                                <input class="login__input" id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email">
                             </label>
                             <label for="senha" class="login__label">
-                                <span>SENHA</span>
-                                <i class="fa-solid fa-lock input-icon"></i>
-                                <input
-                                    class="login__input login-senha"
-                                    id="senha"
-                                    name="senha"
-                                    type="password"
-                                    placeholder="Senha"
-                                    autocomplete="off"
-                                    autocorrect="off"
-                                    autocapitalize="off"
-                                    spellcheck="false"
-                                >
-                                <i class="fa-regular fa-eye-slash input-icon password-show"></i>
+                                <span>Senha</span>
+                                <i class="fa-solid fa-lock input-icon" aria-hidden="true"></i>
+                                <input class="login__input" id="senha" name="senha" type="password" placeholder="Senha" autocomplete="new-password">
+                                <button type="button" class="password-show" aria-label="Mostrar senha">
+                                    <i class="fa-regular fa-eye-slash" aria-hidden="true"></i>
+                                </button>
                             </label>
                         </div>
-                        <button
-                            class="alt-button login__btn submit-btn"
-                            id="submit-btn"
-                            type="button"
-                        >
+                        <button class="alt-button login__btn" type="submit">
                             <span>Conectar-se</span>
                         </button>
                     </form>
                 </div>
             </div>
         </dialog>
-    </section>
 
-    <main>
-        <!-- ================================================= -->
-        <!-- SEÇÃO HERO -->
-        <!-- ================================================= -->
-        <section class="hero">
+        <!-- ── Hero ── -->
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero__container">
                 <div class="hero__content">
-                    <h1 class="hero__main-title">Inteligência espacial para cidades mais seguras.</h1>
+                    <h1 class="hero__main-title" id="hero-title">Inteligência espacial para cidades mais seguras.</h1>
                     <p class="hero__main-subtitle">Monitoramento urbano em tempo real com dados de satélites, clima, sensores e IA avançada.</p>
-                </div>
-            </div>
-        </section>
-        <!-- ================================================= -->
-        <!-- SEÇÃO DE SOBRE O CONTEUDO -->
-        <!-- ================================================= -->
-        <section class="about">
-            <div class="container__about-content">
-                <div class="about__head">
-                    <p class="title-eyebrow">sobre a atmos</p>
-                    <h2 class="content__title">
-                        Tecnologia que enxerga de cima.
-                    </h2>
-                </div>
-                <div class="about__content">
-                    <p class="content__subtitle">
-                        A Atmos nasceu da convicção de que dados espaciais podem salvar vidas no ambiente urbano. Combinamos imagens de satélite, sensores distribuídos e modelos de inteligência artificial para oferecer uma visão completa e em tempo real de qualquer cidade do Brasil.
-                        Nossa plataforma foi desenvolvida em parceria com institutos de pesquisa e testada em 12 cidades brasileiras, gerando insights que antes levavam dias em menos de 30 segundos.
-                    </p>
-                    <div class="stats__count">
-                        <div class="stats__card">
-                            <h3 class="stats__num">12+</h3>
-                            <p class="stats__desc">cidades ativas</p>
-                        </div>
-                        <div class="stats__card">
-                            <h3 class="stats__num">98%</h3>
-                            <p class="stats__desc">precisao</p>
-                        </div>
-                        <div class="stats__card">
-                            <h3 class="stats__num">30s</h3>
-                            <p class="stats__desc">latência média</p>
-                        </div>
+                    <div class="button__section">
+                        <button type="button" class="alt-button btn-login" aria-haspopup="dialog">
+                            <span>Acessar Plataforma</span>
+                        </button>
+                        <a href="./pages/contato.html" class="alt-button">
+                            <span>Fale com nossa equipe</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ================================================= -->
-        <!-- SEÇÃO DE FUNCIONALIDADES -->
-        <!-- ================================================= -->
-        <section class="features">
+
+        <!-- ── Sobre ── -->
+        <section class="about" aria-labelledby="about-title">
+            <div class="container__about-content">
+                <div class="about__head">
+                    <p class="title-eyebrow">Sobre a Atmos</p>
+                    <h2 class="content__title" id="about-title">Tecnologia que enxerga de cima.</h2>
+                </div>
+                <div class="about__content">
+                    <p class="content__subtitle">A Atmos nasceu da convicção de que dados espaciais podem salvar vidas no ambiente urbano. Combinamos imagens de satélite, sensores distribuídos e modelos de inteligência artificial para oferecer uma visão completa e em tempo real de qualquer cidade do Brasil. Nossa plataforma foi desenvolvida em parceria com institutos de pesquisa e testada em 12 cidades brasileiras, gerando insights que antes levavam dias em menos de 30 segundos.</p>
+                    <dl class="stats__count">
+                        <div class="stats__card">
+                            <dt class="stats__desc">Cidades ativas</dt>
+                            <dd class="stats__num">12+</dd>
+                        </div>
+                        <div class="stats__card">
+                            <dt class="stats__desc">Precisão</dt>
+                            <dd class="stats__num">98%</dd>
+                        </div>
+                        <div class="stats__card">
+                            <dt class="stats__desc">Latência média</dt>
+                            <dd class="stats__num">30s</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Funcionalidades ── -->
+        <section class="features" aria-labelledby="features-title">
             <div class="container__features-content">
                 <div class="feature__head">
-                    <p class="title-eyebrow">
-                        funcionalidades
-                    </p>
-                    <h2 class="content__title">
-                        O que a plataforma faz.
-                    </h2>
-                </div>
-                <div class="feature__content">
+                    <p class="title-eyebrow">Funcionalidades</p>
+                    <h2 class="content__title" id="features-title">O que a plataforma faz.</h2>
                     <p class="content__subtitle">Seis módulos integrados que transformam dados brutos em decisões estratégicas para gestores, engenheiros e pesquisadores urbanos.</p>
                 </div>
+                <ul class="feature__content modules__grid" role="list">
+                    <li class="modules__content">
+                        <span class="module__number" aria-hidden="true">01</span>
+                        <p class="module__icon" aria-hidden="true">🛰️</p>
+                        <h3 class="module__title">Imageamento de Satélite</h3>
+                        <p class="module__desc">Imagens multiespectrais atualizadas a cada 6 horas cobrindo toda a área urbana com resolução de 1m².</p>
+                    </li>
+                    <li class="modules__content">
+                        <span class="module__number" aria-hidden="true">02</span>
+                        <p class="module__icon" aria-hidden="true">🌦️</p>
+                        <h3 class="module__title">Monitoramento Climático</h3>
+                        <p class="module__desc">Dados de temperatura, umidade, precipitação e qualidade do ar integrados com modelos preditivos de 72 horas.</p>
+                    </li>
+                    <li class="modules__content">
+                        <span class="module__number" aria-hidden="true">03</span>
+                        <p class="module__icon" aria-hidden="true">🧠</p>
+                        <h3 class="module__title">IA e Análise Preditiva</h3>
+                        <p class="module__desc">Modelos treinados com dados históricos de 10 anos que antecipam enchentes, calor extremo e falhas de infraestrutura.</p>
+                    </li>
+                    <li class="modules__content">
+                        <span class="module__number" aria-hidden="true">04</span>
+                        <p class="module__icon" aria-hidden="true">🗺️</p>
+                        <h3 class="module__title">Mapas Inteligentes</h3>
+                        <p class="module__desc">Camadas interativas sobreponíveis em tempo real: risco, tráfego, cobertura vegetal, densidade e muito mais.</p>
+                    </li>
+                    <li class="modules__content">
+                        <span class="module__number" aria-hidden="true">05</span>
+                        <p class="module__icon" aria-hidden="true">🔔</p>
+                        <h3 class="module__title">Alertas Automatizados</h3>
+                        <p class="module__desc">Sistema de notificações por criticidade com integração direta a prefeituras, defesa civil e corpo de bombeiros.</p>
+                    </li>
+                    <li class="modules__content">
+                        <span class="module__number" aria-hidden="true">06</span>
+                        <p class="module__icon" aria-hidden="true">📊</p>
+                        <h3 class="module__title">Relatórios e Dashboards</h3>
+                        <p class="module__desc">Painéis customizáveis e exportação de relatórios no formato de cada órgão. Dados prontos para decisão.</p>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <!-- ================================================= -->
-        <!-- SEÇÃO DE MODULOS -->
-        <!-- ================================================= -->
-        <section class="modules">
-            <div class="modules__grid">
-
-                <article class="modules__content">
-                    <span class="module__number">01</span>
-                    <p class="module__icon">🛰️</p>
-                    <h3 class="module__title">Imageamento de Satélite</h3>
-                    <p class="module__desc">Imagens multiespectrais atualizadas a cada 6 horas cobrindo toda a área urbana com resolução de 1m².</p>
-                </article>
-
-                <article class="modules__content">
-                    <span class="module__number">02</span>
-                    <p class="module__icon">🌦️</p>
-                    <h3 class="module__title">Monitoramento Climático</h3>
-                    <p class="module__desc">Dados de temperatura, umidade, precipitação e qualidade do ar integrados com modelos preditivos de 72 horas.</p>
-                </article>
-
-                <article class="modules__content">
-                    <span class="module__number">03</span>
-                    <p class="module__icon">🧠</p>
-                    <h3 class="module__title">IA e Análise Preditiva</h3>
-                    <p class="module__desc">Modelos treinados com dados históricos de 10 anos que antecipam enchentes, calor extremo e falhas de infraestrutura.</p>
-                </article>
-
-                <article class="modules__content">
-                    <span class="module__number">04</span>
-                    <p class="module__icon">🗺️</p>
-                    <h3 class="module__title">Mapas Inteligentes</h3>
-                    <p class="module__desc">Camadas interativas sobreponíveis em tempo real: risco, tráfego, cobertura vegetal, densidade e muito mais.</p>
-                </article>
-
-                <article class="modules__content">
-                    <span class="module__number">05</span>
-                    <p class="module__icon">🔔</p>
-                    <h3 class="module__title">Alertas Automatizados</h3>
-                    <p class="module__desc">Sistema de notificações por criticidade com integração direta a prefeituras, defesa civil e corpo de bombeiros.</p>
-                </article>
-
-                <article class="modules__content">
-                    <span class="module__number">06</span>
-                    <p class="module__icon">📊</p>
-                    <h3 class="module__title">Relatórios e Dashboards</h3>
-                    <p class="module__desc">Painéis customizáveis e exportação de relatórios no formato de cada órgão. Dados prontos para decisão.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="cases">
+        <!-- ── Casos de uso ── -->
+        <section class="cases" aria-labelledby="cases-title">
             <div class="container__cases">
                 <div class="cases__head">
-                    <p class="title-eyebrow">casos de uso</p>
-                    <h2 class="content__title">
-                        Onde aplicamos.
-                    </h2>
+                    <p class="title-eyebrow">Casos de uso</p>
+                    <h2 class="content__title" id="cases-title">Onde aplicamos.</h2>
                 </div>
-                <div class="cases__apply">
-                    <article class="cases__apply-card">
-                        <img src="./assets/img/home/enchente-sao-paulo.png" alt="Imagem de enchente em sao paulo" class="cases__images">
+                <ul class="cases__apply" role="list">
+                    <li class="cases__apply-card">
+                        <img src="./assets/img/home/enchente-sao-paulo.png" alt="Vista aérea de enchente em São Paulo" class="cases__images">
                         <div class="cases__content">
-                            <span class="cases__eyebrow-title">Gestão de risco</span>
+                            <p class="cases__eyebrow-title">Gestão de risco</p>
                             <h3 class="cases__title">Prevenção de enchentes urbanas</h3>
                             <p class="cases__desc">Monitoramento de bacias hidrográficas com alertas antecipados de até 48 horas antes de eventos críticos.</p>
                         </div>
-                    </article>
-                    <article class="cases__apply-card">
-                        <img src="./assets/img/home/ilhas-de-calor.png" alt="Dados das ilhas de calor" class="cases__images">
+                    </li>
+                    <li class="cases__apply-card">
+                        <img src="./assets/img/home/ilhas-de-calor.png" alt="Mapa de ilhas de calor urbanas" class="cases__images">
                         <div class="cases__content">
-                            <span class="cases__eyebrow-title">Saúde pública</span>
+                            <p class="cases__eyebrow-title">Saúde pública</p>
                             <h3 class="cases__title">Ilhas de calor e saúde urbana</h3>
                             <p class="cases__desc">Mapeamento em escala de quarteirão para orientar políticas de arborização e resfriamento de cidades.</p>
                         </div>
-                    </article>
-                    <article class="cases__apply-card">
-                        <img src="./assets/img/home/construcao.png" alt="" class="cases__images">
+                    </li>
+                    <li class="cases__apply-card">
+                        <img src="./assets/img/home/construcao.png" alt="Monitoramento de obra urbana por satélite" class="cases__images">
                         <div class="cases__content">
-                            <span class="cases__eyebrow-title">Infraestrutura</span>
+                            <p class="cases__eyebrow-title">Infraestrutura</p>
                             <h3 class="cases__title">Monitoramento de obras e ocupações</h3>
                             <p class="cases__desc">Detecção automática de mudanças no território urbano para fiscalização de obras e expansão irregular.</p>
                         </div>
-                    </article>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section class="cta">
+        <!-- ── CTA ── -->
+        <section class="cta" aria-label="Chamada para ação">
             <div class="cta__grid">
                 <div class="cta__pitch">
-                    <span class="cta__eyebrow-title">comece agora</span>
+                    <p class="cta__eyebrow-title">Comece agora</p>
                     <h2 class="cta__title">Sua cidade vista de outro nível.</h2>
-                    <button type="button" class="alt-button cta__contact-button btn-login">
+                    <button type="button" class="alt-button cta__contact-button btn-login" aria-haspopup="dialog">
                         <span>Acessar Plataforma</span>
-                        <div class="glow"></div>
+                        <div class="glow" aria-hidden="true"></div>
                     </button>
                 </div>
                 <div class="cta__contact">
-                    <h2 class="cta__contact-title">fale com a equipe</h2>
+                    <h2 class="cta__contact-title">Fale com a equipe</h2>
                     <p class="cta__contact-desc">Agende uma demonstração personalizada ou tire dúvidas com nossos especialistas em monitoramento urbano.</p>
                     <a href="./pages/contato.html" class="alt-button cta__contact-button">
                         <span>Ir para contatos</span>
-                        <div class="glow"></div>
+                        <div class="glow" aria-hidden="true"></div>
                     </a>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- ── Footer ── -->
     <footer class="footer" aria-label="Rodapé">
         <div class="footer__content">
             <nav class="footer__nav" aria-label="Navegação do rodapé">
-                <a href="../index.html">Home</a>
-                <a href="./equipe.html" aria-current="page">Equipe</a>
-                <a href="./faq.html">FAQ</a>
-                <a href="./solucao.html">Solução</a>
-                <a href="./contato.html">Contato</a>
+                <a href="./index.html" aria-current="page">Home</a>
+                <a href="./pages/equipe.html">Equipe</a>
+                <a href="./pages/faq.html">FAQ</a>
+                <a href="./pages/solucao.html">Solução</a>
+                <a href="./pages/contato.html">Contato</a>
             </nav>
-
-            <a href="../index.html" class="footer__logo" aria-label="Voltar para a página inicial da Atmos">
-                <img src="../assets/img/logos/logo2.png" alt="Atmos">
+            <a href="./index.html" class="footer__logo" aria-label="Atmos — Página inicial">
+                <img src="./assets/img/logos/logo2.png" alt="Atmos">
             </a>
-
-            <button type="button" class="main-button btn-login">
+            <button type="button" class="main-button btn-login" aria-haspopup="dialog">
                 <span>Acessar Plataforma</span>
-                <div class="glow"></div>
+                <div class="glow" aria-hidden="true"></div>
             </button>
         </div>
         <div class="footer__bottom">
