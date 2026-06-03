@@ -8,7 +8,7 @@
 html {
     font-family: var(--font-manrope);
     color: var(--mist);
-    background-color: var(--full-white);
+    background-color: var(--space-black);
     font-size: 62.5%;
 }
 
