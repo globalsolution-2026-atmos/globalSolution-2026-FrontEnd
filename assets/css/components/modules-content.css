@@ -1,31 +1,45 @@
 .modules__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    border-top: .1rem solid rgba(0, 0, 0, 0.16);
-    border-left: .1rem solid rgba(0, 0, 0, 0.16);
+    gap: 1rem;
 }
 
 .modules__content {
     min-width: 0;
-    border-right: .1rem solid rgba(0, 0, 0, 0.16);
-    border-bottom: .1rem solid rgba(0, 0, 0, 0.16);
     padding: 3rem;
     position: relative;
     overflow: hidden;
+    isolation: isolate;
+    border-radius: 2.4rem;
+    background: transparent;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.4) inset,
+        1px 0 0 rgba(255, 255, 255, 0.08) inset,
+        -1px 0 0 rgba(0, 0, 0, 0.2) inset,
+        0 4px 16px rgba(0, 0, 0, 0.5),
+        0 1px 3px rgba(0, 0, 0, 0.6);
+    transition:
+        transform .25s ease,
+        filter .25s ease,
+        box-shadow .25s ease;
 }
 
 .modules__content::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg, #b324243a, #fff);
-    opacity: 0;
-    transition: opacity .3s ease;
-    z-index: 0;
+    inset: 2px;
+    border-radius: inherit;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, 0)),
+        rgba(10, 15, 28, .82);
+    z-index: -1;
 }
 
 .modules__content:hover::before {
-    opacity: 1;
+    background:
+        linear-gradient(0deg, rgba(179, 36, 36, .22), rgba(10, 15, 28, .92)),
+        rgba(10, 15, 28, .82);
 }
 
 .modules__content > * {
@@ -42,6 +56,11 @@
     height: .2rem;
     background: var(--red);
     transition: width 0.4s ease;
+}
+
+.modules__content:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.12);
 }
 
 .modules__content:hover::after {
@@ -74,14 +93,14 @@
     font-weight: 700;
     width: 30%;
     text-transform: uppercase;
-    color: var(--void);
+    color: var(--mist);
     margin: 2rem 0;
     font-family: var(--font-bebas);
 }
 
 .module__desc {
     font-size: 1.3rem;
-    color: var(--night);
+    color: var(--ice-cloud);
 }
 
 .module__text {

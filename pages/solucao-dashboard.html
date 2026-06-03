@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/base/import.css">
-    <script src="../assets/js/menu.js" defer></script>
-    <script src="../assets/js/login-modal.js" defer></script>
+    <script src="../assets/js/components/menu.js" defer></script>
+    <script src="../assets/js/components/login-modal.js" defer></script>
     <title>Dashboard</title>
 </head>
 <body class="page__equipe">
@@ -169,5 +169,31 @@
             </dialog>
         </section>
     </main>
+
+    <footer class="footer" aria-label="Rodapé">
+        <div class="footer__content">
+            <nav class="footer__nav" aria-label="Navegação do rodapé">
+                <a href="../index.html">Home</a>
+                <a href="./equipe.html" aria-current="page">Equipe</a>
+                <a href="./faq.html">FAQ</a>
+                <a href="./solucao.html">Solução</a>
+                <a href="./contato.html">Contato</a>
+            </nav>
+
+            <a href="../index.html" class="footer__logo" aria-label="Voltar para a página inicial da Atmos">
+                <img src="../assets/img/logos/logo2.png" alt="Atmos">
+            </a>
+
+            <button type="button" class="main-button btn-login">
+                <span>Acessar Plataforma</span>
+                <div class="glow"></div>
+            </button>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Atmos. Todos os direitos reservados.</p>
+            <p>Inteligência espacial para cidades mais seguras.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

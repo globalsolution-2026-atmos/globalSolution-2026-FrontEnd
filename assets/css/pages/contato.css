@@ -1,0 +1,452 @@
+/* ── Variáveis da página ── */
+.page__contato {
+    --contato-hero-height: calc(100vh - 2rem);
+    --contato-hero-image: url(../../img/contato/preview-contato.webp);
+    --contato-content-bg: var(--space-black);
+    --hero-content-blend-color: var(--contato-content-bg);
+    width: 100%;
+    overflow-x: hidden;
+    background: var(--full-black);
+}
+
+.page__contato main {
+    background: var(--contato-content-bg);
+    padding-bottom: clamp(6rem, 8vw, 10rem);
+}
+
+/* ── Hero ── */
+.contato__hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: var(--contato-hero-height);
+    padding: 12rem 8rem 15rem;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--contato-hero-image) center / cover no-repeat;
+}
+
+/* Overlay escuro sobre a foto */
+.contato__hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+/* Degradê na base para mesclar com o conteúdo abaixo */
+.contato__hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -1px;
+    z-index: 1;
+    height: var(--hero-content-blend-size);
+    background: var(--hero-content-blend);
+}
+
+.contato__hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 76rem;
+}
+
+/* ── Conteúdo principal ── */
+.contato__main {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    z-index: 3;
+    margin-top: -24rem;
+    padding: 0 8rem 8rem;
+    color: var(--mist);
+    background: linear-gradient(to bottom, transparent, rgba(3, 5, 14, .72) 52%, var(--contato-content-bg));
+}
+
+/* ── Container do formulário ── */
+.form__item {
+    width: min(100%, 70rem);
+}
+
+/* ── Formulário ── */
+.contato__plataforma,
+.duvidas__accordion,
+.contato__info,
+.contato__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: clamp(2.4rem, 4vw, 4.4rem);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 2.4rem;
+    background: rgba(16, 16, 16, .11);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, .12) inset,
+        0 3rem 8rem rgba(0, 0, 0, .38);
+    backdrop-filter: blur(1.8rem);
+    -webkit-backdrop-filter: blur(1.8rem);
+    width: 84%;
+}
+
+.contato__info {width: 40%;}
+.contato__form {width: 100%;}
+
+.duvidas__accordion-title,
+.contato__info-title,
+.contato__form-title {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+
+.contato__info-title {
+    width: 50%;
+}
+
+.contato__form-subtitle {
+    font-size: 1.5rem;
+    color: var(--ice-cloud);
+}
+
+/* Linha com dois campos lado a lado */
+.contato__form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 4rem;
+}
+
+/* ── Label e campos ── */
+.contato__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.contato__label span { font-size: 1.5rem; }
+
+/* Estilos base compartilhados entre input, textarea e trigger do select */
+.contato__input,
+.contato__textarea,
+.contato__select-trigger {
+    width: 100%;
+    padding: 1.5rem 3.8rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+    color: var(--mist);
+    font: inherit;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, .18) inset,
+        0 -1px 0 rgba(0, 0, 0, .4) inset,
+        1px 0 0 rgba(255, 255, 255, .08) inset,
+        -1px 0 0 rgba(0, 0, 0, .2) inset;
+    transition: box-shadow .2s ease;
+}
+
+.contato__input::placeholder,
+.contato__textarea::placeholder {
+    color: rgba(220, 231, 255, .72);
+    font-size: 1.3rem;
+}
+
+/* Estado de foco */
+.contato__input:focus,
+.contato__textarea:focus,
+.contato__select-trigger:focus-visible {
+    box-shadow:
+        0 0 0 2px rgba(214, 228, 255, .34),
+        0 1px 0 rgba(255, 255, 255, .18) inset,
+        0 -1px 0 rgba(0, 0, 0, .4) inset,
+        1px 0 0 rgba(255, 255, 255, .08) inset,
+        -1px 0 0 rgba(0, 0, 0, .2) inset;
+}
+
+/* Estado de erro */
+.contato__input[aria-invalid="true"],
+.contato__textarea[aria-invalid="true"],
+.contato__select-trigger[aria-invalid="true"] {
+    box-shadow:
+        0 0 0 2px var(--red),
+        0 1px 0 rgba(255, 255, 255, .18) inset,
+        0 -1px 0 rgba(0, 0, 0, .4) inset,
+        1px 0 0 rgba(255, 255, 255, .08) inset,
+        -1px 0 0 rgba(0, 0, 0, .2) inset;
+}
+
+/* Mensagem de erro inline */
+.contato__label .contato__error {
+    color: var(--red);
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.contato__textarea {
+    min-height: 16rem;
+    resize: vertical;
+}
+
+/* ── Select customizado ── */
+.contato__label--select { margin-top: 1.2rem; }
+
+.contato__select { position: relative; }
+
+.contato__select-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Texto placeholder do select */
+.contato__select-trigger [data-select-value] {
+    display: block;
+    color: rgba(220, 231, 255, .72);
+    font-size: 1.3rem;
+}
+
+/* Quando uma opção já foi escolhida */
+.contato__select.has-value .contato__select-trigger [data-select-value] {
+    color: var(--mist);
+}
+
+/* Lista de opções — oculta por padrão */
+.contato__options {
+    position: absolute;
+    top: calc(100% + .6rem);
+    inset-inline: 0;
+    z-index: 5;
+    display: none;
+    flex-direction: column;
+    gap: .3rem;
+    max-height: 24rem;
+    overflow-y: auto;
+    padding: .6rem;
+    border-radius: 10px;
+    list-style: none;
+    margin: 0;
+    background: rgba(3, 5, 14, .82);
+    color: var(--mist);
+    font-size: 1.3rem;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, .18) inset,
+        0 -1px 0 rgba(0, 0, 0, .4) inset,
+        0 1rem 3rem rgba(0, 0, 0, .34);
+    backdrop-filter: blur(1.2rem);
+    -webkit-backdrop-filter: blur(1.2rem);
+}
+
+/* Lista visível quando o select está aberto */
+.contato__select.is-open .contato__options { display: flex; }
+
+/* Cada opção da lista */
+.contato__options [role="option"] {
+    border: 0;
+    border-radius: 8px;
+    padding: 1rem 1.4rem;
+    background: transparent;
+    color: var(--mist);
+    font: inherit;
+    font-size: 1.3rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.contato__options [role="option"]:hover,
+.contato__options [role="option"]:focus-visible,
+.contato__options [role="option"][aria-selected="true"] {
+    outline: none;
+    background: rgba(255, 255, 255, .07);
+}
+
+/* ── Botão de envio ── */
+.contato__form .alt-button {
+    width: 100%;
+    margin-top: 1.2rem;
+    padding: 1.5rem 3.8rem;
+}
+
+.contato__canal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contato__canal .info__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 5.6rem;
+    width: 5.6rem;
+    height: 5.6rem;
+    border: 1px solid var(--satellite);
+    border-radius: 50%;
+    color: var(--satellite);
+    font-size: 2.2rem;
+    background-color: rgba(27, 27, 27, .42);
+}
+
+
+.contato__canal-titulo {
+    font-size: 1.5rem;
+    margin: .8rem 0;
+}
+
+.contato__canal-valor {
+    font-size: 1.5rem;
+    color: var(--mist);
+}
+
+.contato__canal-nota {
+    font-size: 1.3rem;
+}
+
+.contato__info-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contato__info-mapa {
+    position: relative;
+    overflow: hidden;
+    margin-top: .8rem;
+    min-height: 18rem;
+    max-height: 26rem;
+    aspect-ratio: 1.75 / 1;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 1.8rem;
+    background: rgba(3, 5, 14, .28);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, .12) inset,
+        0 1.8rem 4rem rgba(0, 0, 0, .28);
+}
+
+.contato__info-mapa::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(3, 5, 14, .04),
+            rgba(3, 5, 14, .36)
+        );
+}
+
+.contato__info-mapa img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 140%;
+    max-width: none;
+    min-height: 100%;
+    height: auto;
+    transform: translate(-36.4%, -35.6%);
+    filter: saturate(.95) contrast(1.04) brightness(.88);
+}
+.duvidas__accordion {
+    margin: 0 auto 8rem;
+}
+
+.contato__plataforma {
+    margin: 0 auto;
+}
+
+.accordion__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 1rem;
+}
+
+.contato__plataforma {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: clamp(3rem, 6vw, 8rem);
+    min-height: 34rem;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 5, 14, .92) 0%,
+            rgba(3, 5, 14, .72) 42%,
+            rgba(3, 5, 14, .34) 100%
+        ),
+        url(../../img/home/satelite-sar.webp) center 72% / cover no-repeat;
+}
+
+.contato__plataforma::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at 78% 36%,
+            rgba(255, 255, 255, .16),
+            transparent 34%
+        );
+}
+
+.contato__plataforma-left,
+.contato__plataforma-right {
+    position: relative;
+    z-index: 1;
+}
+
+.contato__plataforma-left {
+    max-width: 58rem;
+}
+
+.contato__plataforma-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 38rem;
+}
+
+.contato__plataforma-title {
+    font-size: clamp(3.8rem, 5vw, 6.4rem);
+    line-height: .98;
+    color: var(--full-white);
+}
+
+.contato__plataforma-subtitle {
+    font-size: 1.6rem;
+    color: var(--ice-cloud);
+}
+
+.contato__plataforma .main-button {
+    padding: 1.6rem 2.8rem;
+    font-size: 1.7rem;
+    min-height: 5.8rem;
+}
+
+@media (max-width: 900px) {
+    .contato__plataforma {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        min-height: 38rem;
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(3, 5, 14, .46) 0%,
+                rgba(3, 5, 14, .86) 100%
+            ),
+            url(../../img/home/satelite-sar.webp) center 74% / cover no-repeat;
+    }
+}

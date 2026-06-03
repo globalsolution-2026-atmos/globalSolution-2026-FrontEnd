@@ -1,6 +1,8 @@
 :root {
     --font-manrope: 'Manrope', sans-serif;
     --font-bebas: 'Barlow Condensed', sans-serif;
+    --header-height: 6rem;
+
     /* Backgrounds */
     --full-black: #000;
     --space-black: #050816;
@@ -8,6 +10,8 @@
     --deep-orbit: #0D1326;
     --night: #131A2B;
     --full-white: #ffffff;
+    --hero-content-blend: linear-gradient(to bottom, transparent, var(--hero-content-blend-color, var(--space-black)));
+    --hero-content-blend-size: 100rem;
 
     /* Surfaces */
     --satellite: #1B2740;
