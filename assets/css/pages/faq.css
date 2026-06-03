@@ -1,0 +1,185 @@
+/* ── Variáveis da página ── */
+.page__faq {
+    --faq-hero-height: calc(100vh - 2rem);
+    --faq-hero-image: url(../../img/faq/preview-faq.webp);
+    --faq-content-bg: var(--space-black);
+    --hero-content-blend-color: var(--faq-content-bg);
+    width: 100%;
+    overflow-x: hidden;
+    background: var(--full-black);
+}
+
+/* ── Hero ── */
+.faq__hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: var(--faq-hero-height);
+    padding: 12rem 8rem 15rem;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--faq-hero-image) center / cover no-repeat;
+}
+
+/* Overlay de cor sobre a foto do hero */
+.faq__hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+/* Degradê na base do hero para mesclar com o conteúdo abaixo */
+.faq__hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -1px;
+    z-index: 1;
+    height: var(--hero-content-blend-size);
+    background: var(--hero-content-blend);
+}
+
+.faq__hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 76rem;
+}
+
+.faq__hero .title-eyebrow { color: var(--mist); }
+
+.faq__hero-title {
+    margin-top: 1.6rem;
+    color: var(--full-white);
+    font-size: 7.2rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.faq__hero-desc {
+    max-width: 64rem;
+    margin-top: 2.4rem;
+    color: var(--ice-cloud);
+    font-size: 1.8rem;
+    line-height: 1.7;
+}
+
+/* ── Barra de busca (sticky) ── */
+.search-container {
+    position: sticky;
+    top: calc(var(--header-height) + 1.2rem);
+    z-index: 9;
+    display: grid;
+    gap: 1.8rem;
+    width: min(calc(100% - 4rem), 118rem);
+    margin: -10rem auto 0;
+    padding: 1.8rem 2rem;
+    border: .1rem solid rgba(220, 231, 255, .12);
+    border-radius: 2.4rem;
+    background: rgba(5, 8, 22, .5);
+    box-shadow: 0 2.4rem 6rem rgba(0, 0, 0, .38);
+    backdrop-filter: blur(1.2rem);
+    -webkit-backdrop-filter: blur(1.2rem);
+}
+
+/* ── Campo de busca ── */
+.faq__search-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1.4rem; }
+
+.faq__search {
+    width: min(100%, 42rem);
+    height: 3.6rem;
+    padding: 0 1.2rem;
+    justify-content: flex-start;
+    gap: .8rem;
+    cursor: text;
+    background: rgba(255, 255, 255, .06);
+}
+
+.faq__search i { color: var(--mist); font-size: 1.2rem; }
+
+.faq__search input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    color: var(--mist);
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.faq__search input::placeholder { color: var(--mist); opacity: .78; }
+
+.faq__search:focus-within { filter: brightness(1.12); }
+
+/* ── Contador e navegação por categoria ── */
+.faq__counter { min-height: 1.8rem; color: rgba(220, 231, 255, .76); font-size: 1.3rem; line-height: 1.4; }
+
+.faq__nav-content { display: flex; flex-wrap: wrap; gap: 1.6rem; }
+
+.faq__nav-button {
+    background: none;
+    border: none;
+    color: var(--mist);
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: .82;
+    transition: color .2s ease, opacity .2s ease;
+}
+
+.faq__nav-button:hover,
+.faq__nav-button:focus-visible { color: var(--full-white); outline: none; }
+
+.nav.faq__nav-button.nav-active { color: var(--glow-purple); opacity: 1; }
+
+/* ── Conteúdo principal ── */
+.faq__main {
+    margin-top: -5.6rem;
+    padding: 13rem 8rem 8rem;
+    color: var(--mist);
+    background: var(--faq-content-bg);
+}
+
+.faq__main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: min(100%, 118rem);
+    margin: 0 auto;
+}
+
+/* ── Imagem ── */
+.faq__image-frame {
+    width: 100%;
+    height: clamp(18rem, 32vw, 30rem);
+    overflow: hidden;
+    border-radius: 1.8rem;
+}
+
+.faq__image-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* ── Accordions ── */
+.faq__questions { display: grid; gap: 1rem; width: 100%; margin: 2rem 0; }
+
+.faq__accordion-panel[hidden],
+.accordion[hidden],
+.faq__empty[hidden] { display: none; }
+
+.faq__empty {
+    border-radius: 2.4rem;
+    padding: 2.4rem;
+    color: var(--ice-cloud);
+    background: rgba(10, 15, 28, .68);
+    font-size: 1.5rem;
+}
+
+/* ── Seções de categoria ── */
+.faq-section {
+    padding: 2.5rem;
+    border-radius: 2.4rem;
+    border: .1rem solid rgba(220, 231, 255, .1);
+    background: rgba(10, 15, 28, .62);
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, .24);
+}
