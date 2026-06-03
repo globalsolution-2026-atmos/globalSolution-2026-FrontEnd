@@ -49,6 +49,10 @@
 /* ── Sobre e Funcionalidades ── */
 main { background-color: var(--space-black); }
 
+.page__home main {
+    padding-bottom: clamp(6rem, 8vw, 10rem);
+}
+
 .about,
 .features {
     color: var(--mist);
