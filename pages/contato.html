@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="../assets/css/base/import.css">
     <script src="../assets/js/components/menu.js" defer></script>
     <script src="../assets/js/components/login-modal.js" defer></script>
+    <script src="../assets/js/pages/contato.js" defer></script>
+    <script src="../assets/js/components/accordion.js" defer></script>
     <title>Contato</title>
 </head>
-<body>
-    <body class="page__equipe">
+<body class="page__contato">
     <header class="header">
         <div class="header__content">
             <button class="menu__expand" type="button">
@@ -130,7 +131,7 @@
                                 </label>
                                 <label for="email" class="login__label">
                                     <span>EMAIL</span>
-                                    <i class="fa-regular fa-envelope input-icon"></i>
+                                    <i class="fa-regular fa-envelope info__icon input-icon"></i>
                                     <input
                                     name="email"
                                     class="login__input login-email"
@@ -169,6 +170,187 @@
                 </div>
             </dialog>
         </section>
+
+        <!-- Hero -->
+        <section class="contato__hero" aria-labelledby="contato-hero-title">
+            <div class="contato__hero-content">
+                <p class="title-eyebrow">Contato Atmos</p>
+                <h1 class="faq__hero-title" id="faq-hero-title">Fale com a Atmos.</h1>
+                <p class="faq__hero-desc">Estamos prontos para ajudar você a transformar dados em decisões que tornam cidades mais seguras e resilientes.</p>
+            </div>
+        </section>
+
+        <section class="contato__main" aria-labelledby="contato-form-title">
+
+            <!-- ── Formulário de contato ── -->
+            <div class="form__item">
+                <form class="contato__form" action="#" method="post" novalidate>
+                    <h2 class="contato__form-title" id="contato-form-title">Enviar mensagem</h2>
+                    <p class="contato__form-subtitle">Preencha o formulário e retornaremos em breve.</p>
+                
+                    <div class="contato__form-row">
+                        <label class="contato__label" for="contato-name">
+                            <span>Nome</span>
+                            <input class="contato__input" id="contato-name" name="name" type="text" placeholder="Seu nome completo" autocomplete="off" required>
+                        </label>
+                        <label class="contato__label" for="contato-email">
+                            <span>E-mail</span>
+                            <input class="contato__input" id="contato-email" name="email" type="email" placeholder="seu@email.com" autocomplete="off" required>
+                        </label>
+                    </div>
+                
+                    <label class="contato__label" for="contato-empresa">
+                        <span>Empresa ou instituição</span>
+                        <input class="contato__input" id="contato-empresa" name="empresa" type="text" placeholder="Empresa ou Instituição" autocomplete="off">
+                    </label>
+                
+                    <div class="contato__label contato__label--select">
+                        <span id="subject-label">Assunto</span>
+                        <input type="hidden" name="subject" id="subject-value">
+                        <!-- Select customizado controlado pelo script da página -->
+                        <div class="contato__select" data-select aria-labelledby="subject-label">
+                            <button class="contato__select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="subject-label">
+                                <span data-select-value>Selecione um assunto</span>
+                            </button>
+                            <ul class="contato__options" role="listbox" aria-labelledby="subject-label">
+                                <li role="option" aria-selected="false" data-value="agendar-demo">Agendar demonstração</li>
+                                <li role="option" aria-selected="false" data-value="suporte-tecnico">Suporte técnico</li>
+                                <li role="option" aria-selected="false" data-value="duvidas-dados">Dúvidas sobre dados e monitoramento</li>
+                                <li role="option" aria-selected="false" data-value="integracao">Integração com sistemas</li>
+                                <li role="option" aria-selected="false" data-value="parcerias">Parcerias institucionais</li>
+                                <li role="option" aria-selected="false" data-value="proposta">Solicitar proposta</li>
+                                <li role="option" aria-selected="false" data-value="imprensa">Imprensa e comunicação</li>
+                                <li role="option" aria-selected="false" data-value="outro">Outro assunto</li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <label class="contato__label" for="contato-mensagem">
+                        <span>Mensagem</span>
+                        <textarea class="contato__textarea" id="contato-mensagem" name="mensagem" placeholder="Descreva sua dúvida ou problema com detalhes..." required></textarea>
+                    </label>
+                
+                    <button class="alt-button" id="contato-submit-btn" type="submit">
+                        <span>Enviar mensagem</span>
+                        <span class="contato__btn-arrow" aria-hidden="true">→</span>
+                    </button>
+                </form>
+            </div>
+        
+
+            <!-- ── Informações de contato ── -->
+            <aside class="contato__info" aria-label="Informações de contato">
+            
+                <header class="contato__info-header">
+                    <p class="title-eyebrow">Outros canais</p>
+                    <h2 class="contato__info-title">Outras formas de contato.</h2>
+                </header>
+            
+                <div class="contato__info-conteudo">
+                    <div class="contato__canais" role="list">
+                        <div class="contato__canal">
+                            <i class="fa-regular fa-envelope info__icon" aria-hidden="true"></i>
+                            <div class="contato__canal-info">
+                                <h3 class="contato__canal-titulo">E-mail</h3>
+                                <a class="contato__canal-valor" href="mailto:contato@atmos.com">contato@atmos.com</a>
+                                <p class="contato__canal-nota">Segunda a sexta, das 9h às 18h.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contato__canais" role="list">
+                        <div class="contato__canal">
+                            <i class="fa-notdog fa-solid fa-phone info__icon" aria-hidden="true"></i>
+                            <div class="contato__canal-info">
+                                <h3 class="contato__canal-titulo">Telefone</h3>
+                                <p class="contato__canal-valor">+55 (11) 99999-9999</p>
+                                <p class="contato__canal-nota">Respondemos em até 24h úteis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contato__canais" role="list">
+                        <div class="contato__canal">
+                            <i class="fa-solid fa-building info__icon" aria-hidden="true"></i>
+                            <div class="contato__canal-info">
+                                <h3 class="contato__canal-titulo">Endereço</h3>
+                                <p class="contato__canal-valor">Av. Paulista, 1000 - 12° andar Bela Vista, São Paulo - SP 01310-100</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contato__info-mapa">
+                    <img src="../assets/img/contato/imagem-mapa.png" alt="Mapa da localização da Atmos">
+                </div>
+            
+            </aside>
+        
+        </section>
+
+        <section class="contato__duvidas">
+            <div class="duvidas__accordion">
+                <div class="duvidas__accordion-top">
+                    <p class="title-eyebrow">perguntas frequentes</p>
+                    <h2 class="duvidas__accordion-title">Dúvidas comuns.</h2>
+                </div>
+                <div class="accordion__grid">
+                    <details class="accordion" data-accordion-item>
+                        <summary class="accordion__trigger">
+                            <span class="accordion__title">Qual é o tempo médio de resposta?</span>
+                            <span class="accordion__icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="accordion__content">
+                            <p>Nossa equipe costuma responder em até 24 horas úteis. Solicitações sobre suporte técnico, </p>
+                            <p>demonstrações ou integrações podem exigir uma análise mais detalhada.</p>
+                        </div>
+                    </details>
+                    <details class="accordion" data-accordion-item>
+                        <summary class="accordion__trigger">
+                            <span class="accordion__title">Como posso agendar uma demonstração da Atmos?</span>
+                            <span class="accordion__icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="accordion__content">
+                            <p>Sim. A proposta da Atmos é permitir que a plataforma indique áreas de atenção com base nos dados analisados.</p>
+                            <p>Nossa equipe entrará em contato para apresentar a plataforma e entender as necessidades da sua cidade, empresa ou instituição.</p>
+                        </div>
+                    </details>
+                    <details class="accordion" data-accordion-item>
+                        <summary class="accordion__trigger">
+                            <span class="accordion__title">A Atmos atende órgãos públicos e empresas?</span>
+                            <span class="accordion__icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="accordion__content">
+                            <p>Sim. A Atmos foi pensada para apoiar gestores públicos, equipes técnicas, instituições de pesquisa e empresas que precisam acompanhar riscos urbanos,</p>
+                            <p>dados climáticos, mapas e informações espaciais.</p>
+                        </div>
+                    </details>
+                    <details class="accordion" data-accordion-item>
+                        <summary class="accordion__trigger">
+                            <span class="accordion__title">É possível integrar a Atmos com outros sistemas?</span>
+                            <span class="accordion__icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="accordion__content">
+                            <p>Sim. A Atmos pode ser planejada para se conectar com APIs, bases públicas, sistemas internos e </p>
+                            <p>ferramentas de monitoramento já utilizadas por cidades, empresas ou equipes técnicas.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato__plataforma">
+            <div class="contato__plataforma-left">
+                <p class="title-eyebrow">conheça a plataforma</p>
+                <div class="contato__plataforma-title">Sua cidade vista de outro nivel.</div>
+            </div>
+
+            <div class="contato__plataforma-right">
+                <p class="contato__plataforma-subtitle">Agende uma demonstração personalizada e veja como a Atmos pode transformar a gestão urbana.</p>
+                <button type="button" class="main-button btn-login">
+                    <span>Acessar Plataforma</span>
+                    <div class="glow"></div>
+                </button>
+            </div>
+        </section>
     </main>
 
     <footer class="footer" aria-label="Rodapé">
@@ -196,6 +378,5 @@
         </div>
     </footer>
     
-</body>
 </body>
 </html>
