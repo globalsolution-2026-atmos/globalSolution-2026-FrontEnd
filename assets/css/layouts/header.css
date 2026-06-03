@@ -7,7 +7,7 @@
     border-bottom: .1rem solid rgba(255, 255, 255, .12);
     backdrop-filter: blur(1.6rem) saturate(140%);
     -webkit-backdrop-filter: blur(1.6rem) saturate(140%);
-    height: 6rem;
+    height: var(--header-height);
     width: 100%;
     font-size: 1.6rem;
     box-shadow: 0 .8rem 3rem rgba(0, 0, 0, .18);
