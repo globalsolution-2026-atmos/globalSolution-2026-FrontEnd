@@ -210,35 +210,3 @@
         opacity: 1;
     }
 }
-
-@media (max-width: 760px) {
-    .menu__open.active {
-        padding: 2rem;
-    }
-
-    .content__menu {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .menu-left {
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        padding-right: 0;
-        padding-bottom: 2rem;
-        border-right: 0;
-        border-bottom: .1rem solid rgba(255, 255, 255, .12);
-    }
-
-    .menu-right {
-        justify-content: flex-start;
-    }
-
-    .panel.active {
-        width: 100%;
-    }
-
-    .solution-panel.active {
-        grid-template-columns: 1fr;
-    }
-}
