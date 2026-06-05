@@ -2,8 +2,9 @@
 .hero__container {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100svh;
     width: 100%;
+    padding: calc(var(--header-height) + 4rem) 0 clamp(8rem, 12vh, 14rem);
     position: relative;
     overflow: hidden;
     isolation: isolate;
@@ -60,9 +61,7 @@ main { background-color: var(--space-black); }
 }
 
 .about {
-    position: relative;
-    z-index: 2;
-    margin-top: -22rem;
+    padding-top: clamp(7rem, 9vw, 12rem);
     margin-bottom: 8rem;
 }
 
@@ -75,6 +74,10 @@ main { background-color: var(--space-black); }
     align-items: center;
     gap: 5rem;
     margin-top: 6rem;
+}
+
+.container__about-content {
+    margin-top: 0;
 }
 
 .container__features-content {
