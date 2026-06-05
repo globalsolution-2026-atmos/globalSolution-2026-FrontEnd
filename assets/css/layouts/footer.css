@@ -68,25 +68,3 @@
     font-size: 1.3rem;
     line-height: 1.4;
 }
-
-@media (max-width: 860px) {
-    .footer__content {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        padding: 2rem;
-    }
-
-    .footer__nav {
-        justify-content: center;
-    }
-
-    .footer .main-button {
-        justify-self: center;
-    }
-
-    .footer__bottom {
-        flex-direction: column;
-        padding: 1.6rem 2rem;
-        text-align: center;
-    }
-}
