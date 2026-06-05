@@ -1,0 +1,180 @@
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.popup__card {
+    display: none;
+}
+
+.popup__card:focus {
+    outline: none;
+}
+
+.popup__card.active {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    position: relative;
+    z-index: 2;
+
+    width: min(300vw, 50rem);
+    height: min(100vh, 90rem);
+
+    padding: 2rem;
+    border-radius: 3rem;
+    overflow: hidden;
+
+    background: #111;
+    color: #fff;
+    text-align: left;
+
+    box-shadow:
+        0 3rem 8rem rgba(0, 0, 0, .65),
+        inset 0 0 0 1px rgba(255, 255, 255, .18);
+}
+
+.popup__card.active::before {
+    content: none;
+}
+
+.popup__card .team__icon {
+    position: absolute !important;
+    inset: 1.2rem !important;
+
+    width: calc(100% - 2.4rem) !important;
+    height: calc(100% - 2.4rem) !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    border-radius: 2.2rem !important;
+    z-index: 0 !important;
+}
+
+.popup__card[data-creator-popup="pedro"] .team__icon {
+    object-position: start 20% !important;
+}
+
+.popup__card[data-creator-popup="juan"] .team__icon {
+    object-position: start 12% !important;
+}
+
+.popup__close {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.4rem;
+    z-index: 5;
+
+    width: 3.8rem;
+    height: 3.8rem;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .4);
+    color: #fff;
+
+    font-size: 2.2rem;
+    line-height: 1;
+    cursor: pointer;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.popup__team__card-box {
+    position: relative;
+    z-index: 3;
+    isolation: isolate;
+}
+
+.popup__team__card-box::before {
+    content: "";
+    position: absolute;
+    left: -2rem;
+    right: -2rem;
+    bottom: -2rem;
+    top: -4rem;
+    z-index: -1;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, .95) 0%,
+        rgba(0, 0, 0, .78) 45%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+.description,
+.popup__team__card-rm {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .75);
+}
+
+.popup__team__card-label {
+    margin: .4rem 0;
+    font-size: 2.3rem;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.popup__team__card-text {
+    max-height: none;
+    overflow-y: visible;
+
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, .82);
+}
+
+.popup__team__card-text ul {
+    display: none;
+}
+
+.popup__team__links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.4rem;
+}
+
+.popup__team__links a {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: .5rem 1rem;
+    border-radius: 10rem;
+    background: rgba(39, 39, 39, 0.16);
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.popup__team__links span {
+    font-size: 1.3rem;
+    color: var(--mist);
+}
+
+.popup__team__links img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
