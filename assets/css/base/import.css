@@ -25,3 +25,6 @@
 @import url('../pages/solucao.css');
 @import url('../pages/faq.css');
 @import url('../pages/contato.css');
+
+/* Responsive */
+@import url('./responsive.css');
