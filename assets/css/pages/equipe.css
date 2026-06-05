@@ -1,7 +1,13 @@
+.page__equipe {
+    --team-content-bg: var(--space-black);
+    --hero-content-blend-color: var(--team-content-bg);
+    background: var(--team-content-bg);
+}
+
 .team__main {
     padding-top: 0;
-    background-color: var(--full-white);
-    color: var(--space-black);
+    color: var(--ice-cloud);
+    background: var(--team-content-bg);
 }
 
 .page__equipe .hero {
@@ -9,15 +15,32 @@
 }
 
 .hero__team-main {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: 48rem;
-    padding: 12rem 8rem 7rem;
-    border-bottom: .1rem solid rgba(0, 0, 0, .16);
+    min-height: calc(100vh - 2rem);
+    padding: 12rem 8rem 12rem;
+    overflow: hidden;
+    isolation: isolate;
     background:
         linear-gradient(90deg, rgba(0, 0, 0, .82), rgba(0, 0, 0, .46), rgba(0, 0, 0, .18)),
         url(../../img/equipe/preview-equipe.png) center / cover no-repeat;
+}
+
+.hero__team-main::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -1px;
+    z-index: 1;
+    height: var(--hero-content-blend-size);
+    pointer-events: none;
+    background: var(--hero-content-blend);
+}
+
+.hero__team-main > * {
+    position: relative;
+    z-index: 2;
 }
 
 .hero__title {
@@ -56,7 +79,7 @@
 }
 
 .team-section__title {
-    color: var(--space-black);
+    color: var(--ice-cloud);
     font-size: 4.8rem;
     font-weight: 800;
     line-height: 1;
@@ -65,6 +88,7 @@
 
 .team-roles__grid {
     display: grid;
+    gap: 3rem;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     border-top: .1rem solid rgba(0, 0, 0, .16);
     border-left: .1rem solid rgba(0, 0, 0, .16);
@@ -119,48 +143,4 @@
     width: 6rem;
     height: 6rem;
     object-fit: contain;
-}
-
-@media (max-width: 1180px) {
-    .hero__team-main {
-        padding-inline: 4rem;
-    }
-
-    .team-roles {
-        padding-inline: 4rem;
-    }
-
-    .team-roles__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 620px) {
-    .hero__team-main {
-        min-height: 40rem;
-        padding: 9rem 2rem 5rem;
-    }
-
-    .hero__title,
-    .team-section__title {
-        font-size: 3.6rem;
-    }
-
-    .hero__desc {
-        font-size: 1.6rem;
-    }
-
-    .team-roles {
-        padding: 5rem 2rem;
-    }
-
-    .team-roles__grid {
-        grid-template-columns: 1fr;
-        max-width: 42rem;
-        margin: 0 auto;
-    }
-
-    .page__equipe .modules__content--profile {
-        min-height: 0;
-    }
 }
