@@ -25,6 +25,7 @@
 @import url('../pages/solucao.css');
 @import url('../pages/faq.css');
 @import url('../pages/contato.css');
+@import url('../pages/solucao-dashboard.css');
 
 /* Responsive */
 @import url('./responsive.css');

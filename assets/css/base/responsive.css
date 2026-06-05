@@ -156,3 +156,21 @@
     .solucao__icon { width: 4.8rem; height: 4.8rem; }
     .solucao__timeline::before { left: 2.4rem; }
 }
+
+/* ── Dashboard ── */
+@media (max-width: 760px) {
+    .dashboard__nav { overflow-x: auto; justify-content: flex-start; gap: 1rem; width: calc(100% - 3.2rem); padding: 1.2rem; }
+    .dashboard__nav-link { flex: 0 0 auto; min-height: 5.2rem; padding: 0 1.4rem; }
+    .dashboard__sections, .dashboard__main-content { width: calc(100% - 3.2rem); }
+    .dashboard__main-left { flex-direction: column; }
+}
+
+@media (max-width: 640px) {
+    .dashboard__hero { padding: 10rem 2rem 15rem; }
+    .dashboard__hero-title { font-size: 4.2rem; }
+    .dashboard__nav { margin-top: -6rem; }
+    .dashboard__main-content { margin-top: 3rem; }
+    .dashboard__mapa-title { padding: 2rem 1.8rem 0; font-size: 2.4rem; }
+    .dashboard__mapa-legend { position: static; min-width: 0; margin: 0 1.2rem 1.2rem; }
+    .dashboard__mapa img { max-height: none; }
+}

@@ -9,7 +9,7 @@
     <script src="../assets/js/components/login-modal.js" defer></script>
     <title>Dashboard</title>
 </head>
-<body class="page__equipe">
+<body class="page__dashboard">
     <header class="header">
         <div class="header__content">
             <button class="menu__expand" type="button">
@@ -169,15 +169,72 @@
                 </div>
             </dialog>
         </section>
+
+        <section class="dashboard__hero" aria-labelledby="dashboard-hero-title">
+            <div class="dashboard__hero-content">
+                <p class="title-eyebrow">Dashboard Atmos</p>
+                <h1 class="dashboard__hero-title" id="dashboard-hero-title">Monitoramento Urbano em Tempo Real.</h1>
+                <p class="dashboard__hero-desc">Acompanhe indicadores críticos, visualize mapas inteligentes e receba alertas em tempo real para tomar decisões mais rápidas e seguras.</p>
+            </div>
+        </section>
+
+        <nav class="dashboard__nav" aria-label="Navegação do dashboard">
+            <a class="dashboard__nav-link dashboard__nav-link--active" href="#visao-geral" aria-current="page">
+                <span class="dashboard__nav-icon" aria-hidden="true"><i class="fa-solid fa-house"></i></span>
+                <span>Visão Geral</span>
+            </a>
+            <a class="dashboard__nav-link" href="#clima">
+                <span class="dashboard__nav-icon" aria-hidden="true"><i class="fa-solid fa-cloud-sun"></i></span>
+                <span>Clima</span>
+            </a>
+            <a class="dashboard__nav-link" href="#riscos">
+                <span class="dashboard__nav-icon" aria-hidden="true"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                <span>Riscos</span>
+            </a>
+        </nav>
+
+        <section class="dashboard__sections" aria-label="Conteúdo do dashboard">
+            <span class="dashboard__anchor" id="visao-geral" aria-hidden="true"></span>
+            <span class="dashboard__anchor" id="clima" aria-hidden="true"></span>
+            <span class="dashboard__anchor" id="riscos" aria-hidden="true"></span>
+        </section>
+
+        <section class="dashboard__main-content" aria-labelledby="dashboard-map-title">
+            <div class="dashboard__main-left">
+                <div class="dashboard__card dashboard__mapa">
+                    <h2 class="dashboard__title" id="dashboard-map-title">Mapa de riscos</h2>
+                    <div class="dashboard__mapa-frame">
+                        <ul class="dashboard__mapa-legend" aria-label="Legenda do mapa de riscos">
+                            <li><span class="dashboard__legend-dot dashboard__legend-dot--flood"></span>Risco de alagamento</li>
+                            <li><span class="dashboard__legend-dot dashboard__legend-dot--slide"></span>Deslizamento</li>
+                            <li><span class="dashboard__legend-dot dashboard__legend-dot--ground"></span>Deformação do solo</li>
+                            <li><span class="dashboard__legend-dot dashboard__legend-dot--rain"></span>Precipitação</li>
+                        </ul>
+                        <img src="../assets/img/solucao/mapa sao paulo.png" alt="Mapa de riscos da cidade de São Paulo">
+                    </div>
+                </div>
+
+                <div class="dashboard__card">
+                    <h2 class="dashboard__title">Dashboard inteligente</h2>
+                    <div class="dashboard__grid">
+                        <div class="dashboard__grid-card">
+                            <div class="dashboard__card-title"></div>
+                            <div class="dashboard__card-value"></div>
+                            <div class="dashboard__card-desc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer" aria-label="Rodapé">
         <div class="footer__content">
             <nav class="footer__nav" aria-label="Navegação do rodapé">
                 <a href="../index.html">Home</a>
-                <a href="./equipe.html" aria-current="page">Equipe</a>
+                <a href="./equipe.html">Equipe</a>
                 <a href="./faq.html">FAQ</a>
-                <a href="./solucao.html">Solução</a>
+                <a href="./solucao.html" aria-current="page">Solução</a>
                 <a href="./contato.html">Contato</a>
             </nav>
 
