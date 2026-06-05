@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="610" height="458" viewBox="0 0 610 458" role="img" aria-labelledby="title desc">
+    <title id="title">Série temporal</title>
+    <desc id="desc">Gráfico de linha com variação temporal entre abril e maio.</desc>
+    <defs>
+        <linearGradient id="area-fill" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#1683ff" stop-opacity=".34" />
+            <stop offset="100%" stop-color="#1683ff" stop-opacity="0" />
+        </linearGradient>
+        <radialGradient id="card-glow" cx="80%" cy="8%" r="70%">
+            <stop offset="0%" stop-color="#0f6dff" stop-opacity=".16" />
+            <stop offset="100%" stop-color="#020713" stop-opacity="0" />
+        </radialGradient>
+        <filter id="line-glow" x="-20%" y="-80%" width="140%" height="260%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+
+    <rect width="610" height="458" rx="32" fill="#030713" />
+    <rect width="610" height="458" rx="32" fill="url(#card-glow)" />
+    <rect x="24" y="20" width="562" height="418" rx="28" fill="#071026" stroke="#183057" stroke-width="2" />
+
+    <text x="50" y="70" fill="#edf4ff" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing=".5">
+        SÉRIE TEMPORAL
+    </text>
+
+    <g stroke="#263145" stroke-width="1.4" opacity=".66">
+        <line x1="142" y1="154" x2="532" y2="154" />
+        <line x1="142" y1="209" x2="532" y2="209" />
+        <line x1="142" y1="264" x2="532" y2="264" />
+        <line x1="142" y1="319" x2="532" y2="319" />
+        <line x1="142" y1="374" x2="532" y2="374" />
+    </g>
+
+    <g fill="#a7afc2" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="800">
+        <text x="79" y="162">20</text>
+        <text x="95" y="217">10</text>
+        <text x="109" y="272">0</text>
+        <text x="88" y="327">-10</text>
+        <text x="88" y="382">-20</text>
+        <text x="172" y="405">13 Abr</text>
+        <text x="308" y="405">27 Abr</text>
+        <text x="451" y="405">12 Mai</text>
+    </g>
+
+    <path
+        d="M142 271 L169 266 L195 262 L222 262 L249 287 L276 272 L303 276 L330 305 L356 299 L383 262 L410 272 L437 252 L464 263 L491 236 L518 227 L532 208 L532 374 L142 374 Z"
+        fill="url(#area-fill)" />
+    <path
+        d="M142 271 L169 266 L195 262 L222 262 L249 287 L276 272 L303 276 L330 305 L356 299 L383 262 L410 272 L437 252 L464 263 L491 236 L518 227 L532 208"
+        fill="none" stroke="#1683ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" filter="url(#line-glow)" />
+</svg>
