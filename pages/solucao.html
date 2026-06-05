@@ -4,36 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/base/import.css">
-    <link rel="icon" href="../assets/img/icon.png" type="image/png">
     <script src="../assets/js/components/menu.js" defer></script>
     <script src="../assets/js/components/login-modal.js" defer></script>
-    <title>Solução</title>
+    <title>Solução — Atmos</title>
 </head>
 <body class="page__solucao">
-    <header class="header">
+
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-link visually-hidden">Ir para o conteúdo principal</a>
+
+    <header class="header" role="banner">
         <div class="header__content">
-            <button class="menu__expand" type="button">
-                <span class="menu-btn">Menu</span>
+            <button
+                class="menu__expand"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-open"
+                aria-label="Abrir menu de navegação"
+            >
+                <span class="menu-btn" aria-hidden="true">Menu</span>
             </button>
-            <a href="../index.html" class="atmos-logo">
-                <img src="../assets/img/logos/logo2.png" alt="logo atmos">
+
+            <a href="../index.html" class="atmos-logo" aria-label="Atmos — página inicial">
+                <img src="../assets/img/logos/logo2.png" alt="Atmos">
             </a>
-            <button type="button" class="main-button btn-login">
+
+            <button type="button" class="main-button btn-login" aria-haspopup="dialog">
                 <span>Acessar Plataforma</span>
-                <div class="glow"></div>
+                <div class="glow" aria-hidden="true"></div>
             </button>
         </div>
 
-        <div class="menu__open">
+        <div class="menu__open" id="menu-open" aria-hidden="true">
             <div class="content__menu">
-                <nav class="menu-left">
+                <nav class="menu-left" aria-label="Menu principal">
                     <a href="#" class="redirect" data-panel="home">Home</a>
                     <a href="#" class="redirect" data-panel="equipe">Equipe</a>
                     <a href="#" class="redirect" data-panel="faq">FAQ</a>
-                    <a href="#" class="redirect active" data-panel="solucao">Solução</a>
+                    <a href="#" class="redirect active" data-panel="solucao" aria-current="page">Solução</a>
                     <a href="#" class="redirect" data-panel="contato">Contato</a>
                 </nav>
-                <div class="menu-right">
+
+                <div class="menu-right" role="region" aria-label="Prévia das páginas">
 
                     <a href="../index.html" class="panel" id="panel-home">
                         <div class="menu-top">
@@ -44,7 +56,7 @@
                                 para monitorar cidades em tempo real com precisão, velocidade e visão estratégica.
                             </p>
                         </div>
-                        <img src="../assets/img/home/iss073e0575226orig.webp" alt="preview da home" class="img__menu">
+                        <img src="../assets/img/home/iss073e0575226orig.webp" alt="Vista orbital de uma cidade à noite" class="img__menu">
                     </a>
 
                     <a href="./equipe.html" class="panel" id="panel-equipe">
@@ -57,29 +69,29 @@
                                 seguros e sustentáveis.
                             </p>
                         </div>
-                        <img src="../assets/img/equipe/preview-equipe.png" alt="preview da equipe" class="img__menu">
+                        <img src="../assets/img/equipe/preview-equipe.png" alt="Foto da equipe Atmos" class="img__menu">
                     </a>
 
                     <a href="./faq.html" class="panel" id="panel-faq">
                         <div class="menu-top">
-                            <h2 class="panel-title">Nosso Faq</h2>
+                            <h2 class="panel-title">Nosso FAQ</h2>
                             <p class="panel-subtitle">
-                            Tire dúvidas sobre a Atmos, nossa tecnologia e como utilizamos
-                            dados inteligentes para monitorar cidades em tempo real com
-                            precisão, segurança e eficiência.
+                                Tire dúvidas sobre a Atmos, nossa tecnologia e como utilizamos
+                                dados inteligentes para monitorar cidades em tempo real com
+                                precisão, segurança e eficiência.
                             </p>
                         </div>
-                        <img src="../assets/img/faq/preview-faq.webp" alt="preview da faq" class="img__menu">
+                        <img src="../assets/img/faq/preview-faq.webp" alt="Prévia da página de perguntas frequentes" class="img__menu">
                     </a>
 
-                    <div class="panel solution-panel active" id="panel-solucao">
-                        <a href="./solucao.html" class="solution-block">
-                            <img src="../assets/img/solucao/preview-solucao.webp" alt="">
+                    <div class="panel solution-panel active" id="panel-solucao" role="group" aria-label="Páginas de Solução">
+                        <a href="./solucao.html" class="solution-block" aria-current="page">
+                            <img src="../assets/img/solucao/preview-solucao.webp" alt="Prévia da página Solução Atmos">
                             <h2>Atmos — Inteligência Espacial para Cidades Inteligentes</h2>
                             <p>Transformando dados orbitais, inteligência artificial e monitoramento urbano em prevenção, segurança e análise preditiva para o futuro das cidades.</p>
                         </a>
                         <a href="./solucao-dashboard.html" class="solution-block">
-                            <img src="../assets/img/solucao/preview-solucao-dashboard.png" alt="preview do dashboard de prevenção">
+                            <img src="../assets/img/solucao/preview-solucao-dashboard.png" alt="Prévia do dashboard de monitoramento urbano">
                             <h2>Monitoramento Urbano em Tempo Real</h2>
                             <p>Visualize riscos climáticos, deformações urbanas e comportamento da cidade através de mapas inteligentes, inteligência artificial e tecnologia espacial.</p>
                         </a>
@@ -93,7 +105,7 @@
                                 Entre em contato com nossa equipe e participe da evolução da inteligência urbana.
                             </p>
                         </div>
-                        <img src="../assets/img/contato/preview-contato.webp" alt="preview da contato" class="img__menu">
+                        <img src="../assets/img/contato/preview-contato.webp" alt="Prévia da página de contato" class="img__menu">
                     </a>
 
                 </div>
@@ -101,89 +113,129 @@
         </div>
     </header>
 
-    <main>
-        <section class="login__section" aria-label="Acesso à plataforma">
-            <dialog class="modal-login">
-                <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal">x</button>
-                <div class="container__modal-login">
-                    <div class="login__content-left">
-                        <img src="../assets/img/logos/logo2.png" alt="logo atmos" class="icon-login">
-                        <img src="../assets/img/login/login-satelite-sar.jpg" alt="Scan de um SAR" class="login-image">
-                    </div>
-                    <div class="login__content-right">
-                        <form action="." class="login-forms" autocomplete="off">
-                            <p class="title-eyebrow">Seja bem-vindo à atmos</p>
-                            <h2 class="login__title">Crie sua conta</h2>
-                            <p class="login__subtitle">Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de tecnologia espacial, inteligência artificial e monitoramento climático avançado.</p>
-                            <div class="login-labels">
-                                <label for="name" class="login__label">
-                                    <span>NOME</span>
-                                    <i class="fa-solid fa-user input-icon"></i>
-                                    <input
+    <main id="main-content">
+
+        <!-- Modal de Login -->
+        <dialog
+            class="modal-login"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-login-title"
+            aria-describedby="modal-login-desc"
+        >
+            <button
+                class="modal__close"
+                id="btnFecharModal"
+                type="button"
+                aria-label="Fechar modal de login"
+            >
+                <span aria-hidden="true">×</span>
+            </button>
+
+            <div class="container__modal-login">
+                <div class="login__content-left" aria-hidden="true">
+                    <img src="../assets/img/logos/logo2.png" alt="" class="icon-login">
+                    <img src="../assets/img/login/login-satelite-sar.jpg" alt="" class="login-image">
+                </div>
+
+                <div class="login__content-right">
+                    <form class="login-forms" novalidate aria-labelledby="modal-login-title">
+                        <p class="title-eyebrow">Seja bem-vindo à Atmos</p>
+                        <h2 class="login__title" id="modal-login-title">Crie sua conta</h2>
+                        <p class="login__subtitle" id="modal-login-desc">
+                            Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de
+                            tecnologia espacial, inteligência artificial e monitoramento climático avançado.
+                        </p>
+
+                        <fieldset class="login-labels">
+                            <legend class="visually-hidden">Dados de acesso</legend>
+
+                            <label for="name" class="login__label">
+                                <span>Nome</span>
+                                <i class="fa-solid fa-user input-icon" aria-hidden="true"></i>
+                                <input
                                     class="login__input login-name"
                                     id="name"
                                     name="name"
                                     type="text"
-                                    placeholder="Seu nome Completo:"
-                                    autocomplete="off"
-                                    >
-                                </label>
-                                <label for="email" class="login__label">
-                                    <span>EMAIL</span>
-                                    <i class="fa-regular fa-envelope input-icon"></i>
-                                    <input
-                                    name="email"
+                                    placeholder="Seu nome completo"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </label>
+
+                            <label for="email" class="login__label">
+                                <span>E-mail</span>
+                                <i class="fa-regular fa-envelope input-icon" aria-hidden="true"></i>
+                                <input
                                     class="login__input login-email"
                                     id="email"
+                                    name="email"
                                     type="email"
                                     placeholder="seu@email.com"
-                                    autocomplete="off"
-                                    >
-                                </label>
-                                <label for="senha" class="login__label">
-                                    <span>SENHA</span>
-                                    <i class="fa-solid fa-lock input-icon"></i>
-                                    <input
+                                    autocomplete="email"
+                                    required
+                                >
+                            </label>
+
+                            <label for="senha" class="login__label">
+                                <span>Senha</span>
+                                <i class="fa-solid fa-lock input-icon" aria-hidden="true"></i>
+                                <input
                                     class="login__input login-senha"
                                     id="senha"
                                     name="senha"
                                     type="password"
                                     placeholder="Senha"
-                                    autocomplete="off"
-                                    autocorrect="off"
-                                    autocapitalize="off"
-                                    spellcheck="false"
-                                    >
-                                    <i class="fa-regular fa-eye-slash input-icon password-show"></i>
-                                </label>
-                            </div>
-                            <button
-                                class="alt-button login__btn submit-btn"
-                                id="submit-btn"
-                                type="button"
+                                    autocomplete="new-password"
+                                    required
+                                    aria-describedby="senha-toggle"
                                 >
-                                    <span>Conectar-se</span>
-                            </button>
-                        </form>
-                    </div>
+                                <button
+                                    type="button"
+                                    class="password-show"
+                                    id="senha-toggle"
+                                    aria-label="Mostrar senha"
+                                    aria-pressed="false"
+                                >
+                                    <i class="fa-regular fa-eye-slash" aria-hidden="true"></i>
+                                </button>
+                            </label>
+                        </fieldset>
+
+                        <button
+                            class="alt-button login__btn"
+                            id="submit-btn"
+                            type="submit"
+                        >
+                            <span>Conectar-se</span>
+                        </button>
+                    </form>
                 </div>
-            </dialog>
-        </section>
+            </div>
+        </dialog>
 
         <!-- Hero -->
         <section class="solucao__hero" aria-labelledby="solucao-hero-title">
             <div class="solucao__hero-content">
                 <p class="title-eyebrow">Solução Atmos</p>
-                <h1 class="solucao__hero-title" id="solucao-hero-title">Atmos - Inteligência Espacial para Cidades Inteligentes</h1>
-                <p class="solucao__hero-desc">Transformando dados orbitais, inteligência artificial e monitoramento urbano em prevenção, segurança e análise preditiva para o futuro das cidades.</p>
+                <h1 class="solucao__hero-title" id="solucao-hero-title">
+                    Atmos — Inteligência Espacial para Cidades Inteligentes
+                </h1>
+                <p class="solucao__hero-desc">
+                    Transformando dados orbitais, inteligência artificial e monitoramento urbano
+                    em prevenção, segurança e análise preditiva para o futuro das cidades.
+                </p>
             </div>
         </section>
 
+        <!-- Visão Geral: Problema, Solução e Funcionamento -->
         <section class="solucao__overview" aria-labelledby="solucao-overview-title">
             <div class="solucao__overview-card">
-                <article class="solucao__overview-column">
-                    <p class="solucao-eyebrow">O problema</p>
-                    <ul class="solucao__list">
+
+                <article class="solucao__overview-column" aria-labelledby="problema-title">
+                    <p class="solucao-eyebrow" id="problema-title">O problema</p>
+                    <ul class="solucao__list" aria-label="Problemas urbanos monitorados">
                         <li class="solucao__item">
                             <span class="solucao__icon" aria-hidden="true"><i class="fa-solid fa-water"></i></span>
                             <div>
@@ -215,10 +267,13 @@
                     </ul>
                 </article>
 
-                <article class="solucao__overview-column">
+                <article class="solucao__overview-column" aria-labelledby="solucao-overview-title">
                     <p class="solucao-eyebrow">Nossa solução</p>
-                    <h2 class="solucao__overview-title" id="solucao-overview-title">A Atmos combina dados espaciais, inteligência artificial e modelos avançados para entregar informação acionável.</h2>
-                    <ul class="solucao__list solucao__list--compact">
+                    <h2 class="solucao__overview-title" id="solucao-overview-title">
+                        A Atmos combina dados espaciais, inteligência artificial e modelos avançados
+                        para entregar informação acionável.
+                    </h2>
+                    <ul class="solucao__list solucao__list--compact" aria-label="Tecnologias da solução Atmos">
                         <li class="solucao__item">
                             <span class="solucao__icon" aria-hidden="true"><i class="fa-solid fa-satellite"></i></span>
                             <div>
@@ -257,10 +312,10 @@
                     </ul>
                 </article>
 
-                <article class="solucao__overview-column">
-                    <p class="solucao-eyebrow">Como funciona</p>
+                <article class="solucao__overview-column" aria-labelledby="como-funciona-title">
+                    <p class="solucao-eyebrow" id="como-funciona-title">Como funciona</p>
                     <p class="solucao__overview-copy">Um fluxo contínuo de dados que se transforma em decisões que salvam vidas.</p>
-                    <ol class="solucao__timeline">
+                    <ol class="solucao__timeline" aria-label="Etapas do processamento de dados Atmos">
                         <li class="solucao__timeline-item">
                             <span class="solucao__icon" aria-hidden="true"><i class="fa-solid fa-satellite"></i></span>
                             <div>
@@ -298,73 +353,77 @@
                         </li>
                     </ol>
                 </article>
+
             </div>
         </section>
 
-        <section class="solucao__technology">
+        <!-- Tecnologias Espaciais -->
+        <section class="solucao__technology" aria-labelledby="tecnologias-title">
             <div class="solucao__technology-card">
-                <p class="solucao-eyebrow">Tecnologias espaciais</p>
-                <div class="solucao__technology-content">
-                    <div class="solucao__technology-module">
-                        <i class="fa-solid fa-satellite solucao__icon technology-icon"></i>
+                <p class="solucao-eyebrow" id="tecnologias-title">Tecnologias espaciais</p>
+                <ul class="solucao__technology-content" aria-label="Lista de tecnologias espaciais utilizadas">
+                    <li class="solucao__technology-module">
+                        <i class="fa-solid fa-satellite solucao__icon technology-icon" aria-hidden="true"></i>
                         <div class="solucao__technology-desc">
                             <h2 class="solucao__technology-title">SAR</h2>
-                            <p class="solucao__technology-subtitle">Imagens de radar que enxergam através de núvens e no escuro.</p>
+                            <p class="solucao__technology-subtitle">Imagens de radar que enxergam através de nuvens e no escuro.</p>
                         </div>
-                    </div>
-                    <div class="solucao__technology-module">
-                        <i class="fa-solid fa-gauge-high solucao__icon technology-icon"></i>
+                    </li>
+                    <li class="solucao__technology-module">
+                        <i class="fa-solid fa-gauge-high solucao__icon technology-icon" aria-hidden="true"></i>
                         <div class="solucao__technology-desc">
                             <h2 class="solucao__technology-title">InSAR</h2>
-                            <p class="solucao__technology-subtitle">Medição precisa de deformações do solo em milimetros.</p>
+                            <p class="solucao__technology-subtitle">Medição precisa de deformações do solo em milímetros.</p>
                         </div>
-                    </div>
-                    <div class="solucao__technology-module">
-                        <i class="fa-solid fa-cloud-sun-rain solucao__icon technology-icon"></i>
+                    </li>
+                    <li class="solucao__technology-module">
+                        <i class="fa-solid fa-cloud-sun-rain solucao__icon technology-icon" aria-hidden="true"></i>
                         <div class="solucao__technology-desc">
                             <h2 class="solucao__technology-title">Meteorologia Orbital</h2>
                             <p class="solucao__technology-subtitle">Dados climáticos globais e previsões de alta resolução.</p>
                         </div>
-                    </div>
-                    <div class="solucao__technology-module">
-                        <i class="fa-solid fa-hexagon-nodes solucao__icon technology-icon"></i>
+                    </li>
+                    <li class="solucao__technology-module">
+                        <i class="fa-solid fa-hexagon-nodes solucao__icon technology-icon" aria-hidden="true"></i>
                         <div class="solucao__technology-desc">
                             <h2 class="solucao__technology-title">Geointeligência</h2>
-                            <p class="solucao__technology-subtitle">Análises integrada de dados geoespaciais e contextuais.</p>
+                            <p class="solucao__technology-subtitle">Análise integrada de dados geoespaciais e contextuais.</p>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
+        <!-- Impacto Urbano -->
         <section class="solucao__impact" aria-labelledby="solucao-impact-title">
             <div class="solucao__impact-card">
                 <div class="solucao__impact-content">
-                    <p class="solucao-eyebrow" id="solucao-impact-title">Impacto urbano</p>
-                    <div class="solucao__impact-grid">
-                        <article class="solucao__impact-module">
-                            <i class="fa-solid fa-shield-heart solucao__icon impact-icon"></i>
-                            <h2 class="solucao__impact-title">Prevenção</h2>
+                    <h2 class="solucao-eyebrow" id="solucao-impact-title">Impacto urbano</h2>
+                    <ul class="solucao__impact-grid" aria-label="Benefícios do impacto urbano da Atmos">
+                        <li class="solucao__impact-module">
+                            <i class="fa-solid fa-shield-heart solucao__icon impact-icon" aria-hidden="true"></i>
+                            <h3 class="solucao__impact-title">Prevenção</h3>
                             <p class="solucao__impact-subtitle">Antecipe riscos e reduza impactos de desastres antes que aconteçam.</p>
-                        </article>
-                        <article class="solucao__impact-module">
-                            <i class="fa-solid fa-crosshairs solucao__icon impact-icon"></i>
-                            <h2 class="solucao__impact-title">Monitoramento contínuo</h2>
+                        </li>
+                        <li class="solucao__impact-module">
+                            <i class="fa-solid fa-crosshairs solucao__icon impact-icon" aria-hidden="true"></i>
+                            <h3 class="solucao__impact-title">Monitoramento contínuo</h3>
                             <p class="solucao__impact-subtitle">Acompanhe sua cidade 24/7 com dados atualizados de satélites e sensores.</p>
-                        </article>
-                        <article class="solucao__impact-module">
-                            <i class="fa-regular fa-building solucao__icon impact-icon"></i>
-                            <h2 class="solucao__impact-title">Cidades inteligentes</h2>
+                        </li>
+                        <li class="solucao__impact-module">
+                            <i class="fa-regular fa-building solucao__icon impact-icon" aria-hidden="true"></i>
+                            <h3 class="solucao__impact-title">Cidades inteligentes</h3>
                             <p class="solucao__impact-subtitle">Decisões baseadas em dados para cidades mais seguras, resilientes e sustentáveis.</p>
-                        </article>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="solucao__impact-image" role="img" aria-label="Cidade iluminada com conexões digitais"></div>
+                <div class="solucao__impact-image" role="img" aria-label="Cidade iluminada com conexões digitais representando monitoramento urbano"></div>
             </div>
         </section>
+
     </main>
 
-    <footer class="footer" aria-label="Rodapé">
+    <footer class="footer" role="contentinfo">
         <div class="footer__content">
             <nav class="footer__nav" aria-label="Navegação do rodapé">
                 <a href="../index.html">Home</a>
@@ -374,17 +433,18 @@
                 <a href="./contato.html">Contato</a>
             </nav>
 
-            <a href="../index.html" class="footer__logo" aria-label="Voltar para a página inicial da Atmos">
+            <a href="../index.html" class="footer__logo" aria-label="Atmos — voltar para a página inicial">
                 <img src="../assets/img/logos/logo2.png" alt="Atmos">
             </a>
 
-            <button type="button" class="main-button btn-login">
+            <button type="button" class="main-button btn-login" aria-haspopup="dialog">
                 <span>Acessar Plataforma</span>
-                <div class="glow"></div>
+                <div class="glow" aria-hidden="true"></div>
             </button>
         </div>
+
         <div class="footer__bottom">
-            <p>&copy; 2026 Atmos. Todos os direitos reservados.</p>
+            <small>&copy; 2026 Atmos. Todos os direitos reservados.</small>
             <p>Inteligência espacial para cidades mais seguras.</p>
         </div>
     </footer>
