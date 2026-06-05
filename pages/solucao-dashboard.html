@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/base/import.css" />
+    <link rel="icon" href="../assets/img/icon.png" type="image/png" />
+    <script src="../assets/js/components/menu.js" defer></script>
+    <script src="../assets/js/components/login-modal.js" defer></script>
+    <script src="../assets/js/components/dashboard.js" defer></script>
+    <title>Dashboard</title>
+</head>
+
+<body class="page__dashboard">
+    <header class="header">
+        <div class="header__content">
+            <button class="menu__expand" type="button">
+                <span class="menu-btn">Menu</span>
+            </button>
+            <a href="../index.html" class="atmos-logo">
+                <img src="../assets/img/logos/logo2.png" alt="logo atmos" />
+            </a>
+            <button type="button" class="main-button btn-login">
+                <span>Acessar Plataforma</span>
+                <div class="glow"></div>
+            </button>
+        </div>
+
+        <div class="menu__open">
+            <div class="content__menu">
+                <nav class="menu-left">
+                    <a href="#" class="redirect" data-panel="home">Home</a>
+                    <a href="#" class="redirect" data-panel="equipe">Equipe</a>
+                    <a href="#" class="redirect" data-panel="faq">FAQ</a>
+                    <a href="#" class="redirect active" data-panel="solucao">Solução</a>
+                    <a href="#" class="redirect" data-panel="contato">Contato</a>
+                </nav>
+                <div class="menu-right">
+                    <a href="../index.html" class="panel" id="panel-home">
+                        <div class="menu-top">
+                            <h2 class="panel-title">Home</h2>
+                            <p class="panel-subtitle">
+                                Tecnologia espacial aplicada ao cotidiano urbano. A Atmos
+                                conecta satélites, mapas inteligentes e inteligência artificial
+                                para monitorar cidades em tempo real com precisão, velocidade e
+                                visão estratégica.
+                            </p>
+                        </div>
+                        <img src="../assets/img/home/iss073e0575226orig.webp" alt="preview da home" class="img__menu" />
+                    </a>
+
+                    <a href="./equipe.html" class="panel" id="panel-equipe">
+                        <div class="menu-top">
+                            <h2 class="panel-title">Nossa Equipe</h2>
+                            <p class="panel-subtitle">
+                                Uma equipe multidisciplinar apaixonada por tecnologia, dados e
+                                inovação. Trabalhamos juntos todos os dias para transformar
+                                cidades em ambientes mais inteligentes, seguros e sustentáveis.
+                            </p>
+                        </div>
+                        <img src="../assets/img/equipe/preview-equipe.png" alt="preview da equipe" class="img__menu" />
+                    </a>
+
+                    <a href="./faq.html" class="panel" id="panel-faq">
+                        <div class="menu-top">
+                            <h2 class="panel-title">Nosso Faq</h2>
+                            <p class="panel-subtitle">
+                                Tire dúvidas sobre a Atmos, nossa tecnologia e como utilizamos
+                                dados inteligentes para monitorar cidades em tempo real com
+                                precisão, segurança e eficiência.
+                            </p>
+                        </div>
+                        <img src="../assets/img/faq/preview-faq.webp" alt="preview da faq" class="img__menu" />
+                    </a>
+
+                    <div class="panel solution-panel active" id="panel-solucao">
+                        <a href="./solucao.html" class="solution-block">
+                            <img src="../assets/img/solucao/preview-solucao.webp" alt="" />
+                            <h2>Atmos — Inteligência Espacial para Cidades Inteligentes</h2>
+                            <p>
+                                Transformando dados orbitais, inteligência artificial e
+                                monitoramento urbano em prevenção, segurança e análise preditiva
+                                para o futuro das cidades.
+                            </p>
+                        </a>
+                        <a href="./solucao-dashboard.html" class="solution-block">
+                            <img src="../assets/img/solucao/preview-solucao-dashboard.png"
+                                alt="preview do dashboard de prevenção" />
+                            <h2>Monitoramento Urbano em Tempo Real</h2>
+                            <p>
+                                Visualize riscos climáticos, deformações urbanas e comportamento
+                                da cidade através de mapas inteligentes, inteligência artificial
+                                e tecnologia espacial.
+                            </p>
+                        </a>
+                    </div>
+
+                    <a href="./contato.html" class="panel" id="panel-contato">
+                        <div class="menu-top">
+                            <h2 class="panel-title">Contato Atmos</h2>
+                            <p class="panel-subtitle">
+                                Estamos construindo uma nova forma de compreender cidades
+                                através da tecnologia espacial. Entre em contato com nossa
+                                equipe e participe da evolução da inteligência urbana.
+                            </p>
+                        </div>
+                        <img src="../assets/img/contato/preview-contato.webp" alt="preview da contato"
+                            class="img__menu" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login__section" aria-label="Acesso à plataforma">
+            <dialog class="modal-login">
+                <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal">
+                    x
+                </button>
+                <div class="container__modal-login">
+                    <div class="login__content-left">
+                        <img src="../assets/img/logos/logo2.png" alt="logo atmos" class="icon-login" />
+                        <img src="../assets/img/login/login-satelite-sar.jpg" alt="Scan de um SAR"
+                            class="login-image" />
+                    </div>
+                    <div class="login__content-right">
+                        <form action="." class="login-forms" autocomplete="off">
+                            <p class="title-eyebrow">Seja bem-vindo à atmos</p>
+                            <h2 class="login__title">Crie sua conta</h2>
+                            <p class="login__subtitle">
+                                Acesse a Atmos e acompanhe o comportamento urbano em tempo real
+                                através de tecnologia espacial, inteligência artificial e
+                                monitoramento climático avançado.
+                            </p>
+                            <div class="login-labels">
+                                <label for="name" class="login__label">
+                                    <span>NOME</span>
+                                    <i class="fa-solid fa-user input-icon"></i>
+                                    <input class="login__input login-name" id="name" name="name" type="text"
+                                        placeholder="Seu nome Completo:" autocomplete="off" />
+                                </label>
+                                <label for="email" class="login__label">
+                                    <span>EMAIL</span>
+                                    <i class="fa-regular fa-envelope input-icon"></i>
+                                    <input name="email" class="login__input login-email" id="email" type="email"
+                                        placeholder="seu@email.com" autocomplete="off" />
+                                </label>
+                                <label for="senha" class="login__label">
+                                    <span>SENHA</span>
+                                    <i class="fa-solid fa-lock input-icon"></i>
+                                    <input class="login__input login-senha" id="senha" name="senha" type="password"
+                                        placeholder="Senha" autocomplete="off" autocorrect="off" autocapitalize="off"
+                                        spellcheck="false" />
+                                    <i class="fa-regular fa-eye-slash input-icon password-show"></i>
+                                </label>
+                            </div>
+                            <button class="alt-button login__btn submit-btn" id="submit-btn" type="button">
+                                <span>Conectar-se</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+
+        <section class="dashboard__hero" aria-labelledby="dashboard-hero-title">
+            <div class="dashboard__hero-content">
+                <p class="title-eyebrow">Dashboard Atmos</p>
+                <h1 class="dashboard__hero-title" id="dashboard-hero-title">
+                    Monitoramento Urbano em Tempo Real.
+                </h1>
+                <p class="dashboard__hero-desc">
+                    Acompanhe indicadores críticos, visualize mapas inteligentes e receba
+                    alertas em tempo real para tomar decisões mais rápidas e seguras.
+                </p>
+            </div>
+        </section>
+
+        <section class="dashboard__main-content" aria-labelledby="dashboard-map-title">
+            <div class="dashboard__main-left">
+                <div class="dashboard__card dashboard__mapa">
+                    <h2 class="dashboard__title" id="dashboard-map-title">Mapa de riscos</h2>
+                    <div class="dashboard__mapa-frame">
+                        <ul class="dashboard__mapa-legend" aria-label="Legenda do mapa de riscos">
+                            <li>
+                                <span class="dashboard__legend-dot dashboard__legend-dot--flood"></span>Risco de
+                                alagamento
+                            </li>
+                            <li>
+                                <span class="dashboard__legend-dot dashboard__legend-dot--slide"></span>Deslizamento
+                            </li>
+                            <li>
+                                <span class="dashboard__legend-dot dashboard__legend-dot--ground"></span>Deformação do
+                                solo
+                            </li>
+                            <li>
+                                <span class="dashboard__legend-dot dashboard__legend-dot--rain"></span>Precipitação
+                            </li>
+                        </ul>
+                        <img src="../assets/img/solucao/mapa sao paulo.png"
+                            alt="Mapa de riscos da cidade de São Paulo" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard__main-right">
+                <section class="dashboard" aria-labelledby="dashboard-title">
+                    <h2 class="dashboard__title" id="dashboard-title">Dashboard Inteligente</h2>
+
+                    <div class="dashboard__grid">
+                        <!-- Temperatura -->
+                        <article class="dashboard__card" aria-labelledby="card-temperatura-title">
+                            <p class="dashboard__card-label" id="card-temperatura-title">
+                                Temperatura
+                            </p>
+                            <div class="dashboard__card-body">
+                                <div class="dashboard__card-info">
+                                    <strong class="dashboard__card-value">24.3 °C</strong>
+                                    <span class="dashboard__card-trend dashboard__card-trend--up">
+                                        <span aria-hidden="true">↑</span> 2.1°C hoje
+                                    </span>
+                                </div>
+                                <canvas class="dashboard__sparkline" id="sparkline-temperatura" width="120" height="40"
+                                    aria-label="Gráfico de variação de temperatura" role="img">
+                                </canvas>
+                            </div>
+                        </article>
+
+                        <!-- Risco Estrutural -->
+                        <article class="dashboard__card" aria-labelledby="card-risco-title">
+                            <p class="dashboard__card-label" id="card-risco-title">
+                                Risco Estrutural
+                            </p>
+                            <div class="dashboard__card-body">
+                                <div class="dashboard__card-info">
+                                    <strong class="dashboard__card-value dashboard__card-value--danger">Alto</strong>
+                                    <span class="dashboard__card-trend dashboard__card-trend--danger">
+                                        7 áreas críticas
+                                    </span>
+                                </div>
+                                <div class="dashboard__radial" aria-label="78% de risco estrutural" role="img">
+                                    <canvas id="radial-risco" width="64" height="64"></canvas>
+                                    <span class="dashboard__radial-label">78%</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Risco de Alagamento -->
+                        <article class="dashboard__card" aria-labelledby="card-alagamento-title">
+                            <p class="dashboard__card-label" id="card-alagamento-title">
+                                Risco de Alagamento
+                            </p>
+                            <div class="dashboard__card-body">
+                                <div class="dashboard__card-info">
+                                    <strong class="dashboard__card-value dashboard__card-value--info">Elevado</strong>
+                                    <span class="dashboard__card-trend dashboard__card-trend--up">
+                                        <span aria-hidden="true">↑</span> 76% probabilidade
+                                    </span>
+                                </div>
+                                <canvas class="dashboard__sparkline" id="sparkline-alagamento" width="120" height="40"
+                                    aria-label="Gráfico de probabilidade de alagamento" role="img">
+                                </canvas>
+                            </div>
+                        </article>
+
+                        <!-- Tráfego -->
+                        <article class="dashboard__card" aria-labelledby="card-trafego-title">
+                            <p class="dashboard__card-label" id="card-trafego-title">Tráfego</p>
+                            <div class="dashboard__card-body">
+                                <div class="dashboard__card-info">
+                                    <strong
+                                        class="dashboard__card-value dashboard__card-value--warning">Moderado</strong>
+                                    <span class="dashboard__card-trend dashboard__card-trend--warning">
+                                        32 km/h média
+                                    </span>
+                                </div>
+                                <canvas class="dashboard__sparkline" id="sparkline-trafego" width="120" height="40"
+                                    aria-label="Gráfico de velocidade média do tráfego" role="img">
+                                </canvas>
+                            </div>
+                        </article>
+
+                        <!-- Qualidade do Ar -->
+                        <article class="dashboard__card" aria-labelledby="card-ar-title">
+                            <p class="dashboard__card-label" id="card-ar-title">
+                                Qualidade do Ar
+                            </p>
+                            <div class="dashboard__card-body">
+                                <div class="dashboard__card-info">
+                                    <strong class="dashboard__card-value dashboard__card-value--success">Boa</strong>
+                                    <span class="dashboard__card-trend dashboard__card-trend--success">
+                                        AQI 42
+                                    </span>
+                                </div>
+                                <div class="dashboard__radial" aria-label="42% do índice de qualidade do ar" role="img">
+                                    <canvas id="radial-ar" width="64" height="64"></canvas>
+                                    <span class="dashboard__radial-label dashboard__radial-label--success">42%</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Umidade -->
+                        <article class="dashboard__card" aria-labelledby="card-umidade-title">
+                            <p class="dashboard__card-label" id="card-umidade-title">Umidade</p>
+                            <div class="dashboard__card-body">
+                                <div class="dashboard__card-info">
+                                    <strong class="dashboard__card-value">78%</strong>
+                                    <span class="dashboard__card-trend dashboard__card-trend--up">
+                                        <span aria-hidden="true">↑</span> 6% hoje
+                                    </span>
+                                </div>
+                                <canvas class="dashboard__sparkline" id="sparkline-umidade" width="120" height="40"
+                                    aria-label="Gráfico de variação de umidade" role="img">
+                                </canvas>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="dashboard__stats">
+            <div class="dashboard__stats-content">
+                <div class="dashboard__stats-monitoring dashboard__card">
+                    <div class="dashboard__stats-left">
+                        <div class="dashboard__stats-text">
+                            <p class="dashboard__stats-eyebrow">Deformação do solo (mm)</p>
+                            <h3 class="dashboard__stats-value">+18.7 mm</h3>
+                            <p class="dashboard__stats-desc">Variação acumulada (30 dias)</p>
+                            <div class="dashboard__stats-scale" aria-label="Escala de deformação do solo de -20 a +20 milímetros por ano">
+                                <span class="dashboard__stats-scale-bar" aria-hidden="true"></span>
+                                <div class="dashboard__stats-scale-labels">
+                                    <span>-20</span>
+                                    <span>mm/ano</span>
+                                    <span>+20</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard__stats-visuals">
+                            <div class="dashboard__stats-media">
+                                <img src="../assets/img/solucao/mapa-de-calor.png" alt="Mapa de calor cidade são paulo"
+                                    class="dashboard__stats-image" />
+                            </div>
+
+                            <img src="../assets/img/solucao/serie-temporal.svg"
+                                alt="Gráfico de série temporal de deformação do solo" class="dashboard__stats-timeseries" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard__stats-right">
+                    <div class="dashboard__stats-alert dashboard__card">
+                        <div class="dashboard__alert-head">
+                            <h3 class="dashboard__alert-title">Alertas ativos</h3>
+                            <p class="dashboard__alert-value">5 alertas</p>
+                        </div>
+                        <div class="alert__module alert__module--danger">
+                            <span class="alert__module-icon" aria-hidden="true">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </span>
+                            <div class="alert__module-text">
+                                <h4 class="alert__module-title">Alagamento iminente</h4>
+                                <p class="alert__module-desc">Zona Leste - São Paulo</p>
+                            </div>
+                            <p class="alert__module-time">Há 5 min</p>
+                        </div>
+                        <div class="alert__module alert__module--warning">
+                            <span class="alert__module-icon" aria-hidden="true">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </span>
+                            <div class="alert__module-text">
+                                <h4 class="alert__module-title">Deformação detectada</h4>
+                                <p class="alert__module-desc">Vila Prudente</p>
+                            </div>
+                            <p class="alert__module-time">Há 15 min</p>
+                        </div>
+                        <div class="alert__module alert__module--rain">
+                            <span class="alert__module-icon" aria-hidden="true">
+                                <i class="fa-solid fa-cloud-bolt"></i>
+                            </span>
+                            <div class="alert__module-text">
+                                <h4 class="alert__module-title">Chuva intensa prevista</h4>
+                                <p class="alert__module-desc">Região Metropolitana</p>
+                            </div>
+                            <p class="alert__module-time">Há 23 min</p>
+                        </div>
+                        <div class="alert__module alert__module--air">
+                            <span class="alert__module-icon" aria-hidden="true">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </span>
+                            <div class="alert__module-text">
+                                <h4 class="alert__module-title">Qualidade do ar prejudicial</h4>
+                                <p class="alert__module-desc">Centro - São Paulo</p>
+                            </div>
+                            <p class="alert__module-time">Há 35 min</p>
+                        </div>
+                        <div class="alert__module alert__module--slide">
+                            <span class="alert__module-icon" aria-hidden="true">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </span>
+                            <div class="alert__module-text">
+                                <h4 class="alert__module-title">Risco de deslizamento</h4>
+                                <p class="alert__module-desc">Zona Norte</p>
+                            </div>
+                            <p class="alert__module-time">Há 1h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" aria-label="Rodapé">
+        <div class="footer__content">
+            <nav class="footer__nav" aria-label="Navegação do rodapé">
+                <a href="../index.html">Home</a>
+                <a href="./equipe.html">Equipe</a>
+                <a href="./faq.html">FAQ</a>
+                <a href="./solucao.html" aria-current="page">Solução</a>
+                <a href="./contato.html">Contato</a>
+            </nav>
+
+            <a href="../index.html" class="footer__logo" aria-label="Voltar para a página inicial da Atmos">
+                <img src="../assets/img/logos/logo2.png" alt="Atmos" />
+            </a>
+
+            <button type="button" class="main-button btn-login">
+                <span>Acessar Plataforma</span>
+                <div class="glow"></div>
+            </button>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Atmos. Todos os direitos reservados.</p>
+            <p>Inteligência espacial para cidades mais seguras.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
