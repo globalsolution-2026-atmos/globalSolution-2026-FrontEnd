@@ -1,4 +1,4 @@
-/* ── Componentes ── */
+/* ==================== Componentes globais ==================== */
 @media (max-width: 1180px) {
     .modules__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .modal-login { width: calc(100% - 3rem); height: auto; max-height: calc(100vh - 3rem); overflow-y: auto; }
@@ -39,7 +39,39 @@
     .accordion__content, .accordion[open] .accordion__content { padding-right: 1.5rem; padding-left: 1.5rem; }
 }
 
-/* ── Home ── */
+@media (max-width: 1100px) {
+    .platform-cta--large { --platform-cta-width: calc(100% - 8rem); }
+}
+
+@media (max-width: 900px) {
+    .platform-cta {
+        --platform-cta-min-height: 38rem;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        background:
+            linear-gradient(to bottom, rgba(3, 5, 14, .46), rgba(3, 5, 14, .86)),
+            url(../../img/home/satelite-sar.webp) center 74% / cover no-repeat;
+    }
+
+    .platform-cta--compact {
+        --platform-cta-min-height: 32rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .platform-cta {
+        --platform-cta-padding: 2.4rem;
+        --platform-cta-title-size: clamp(3.2rem, 12vw, 4rem);
+    }
+
+    .platform-cta--large {
+        --platform-cta-width: calc(100% - 3.2rem);
+    }
+}
+
+/* ==================== Home ==================== */
 @media (max-width: 1180px) {
     .hero__content { width: min(calc(100% - 8rem), 72rem); margin-left: 4rem; min-width: 0; }
     .hero__main-title { font-size: clamp(6rem, 8vw, 8rem); }
@@ -87,7 +119,7 @@
     .cta__contact-button { min-width: 0; width: 100%; font-size: 2rem; padding: 1.8rem 2rem; }
 }
 
-/* ── Equipe ── */
+/* ==================== Equipe ==================== */
 @media (max-width: 1180px) {
     .hero__team-main, .team-roles { padding-inline: 4rem; }
     .team-roles__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -102,7 +134,7 @@
     .page__equipe .modules__content--profile { min-height: 0; }
 }
 
-/* ── FAQ ── */
+/* ==================== FAQ ==================== */
 @media (max-width: 900px) {
     .faq__hero { padding: 10rem 4rem 14rem; }
     .faq__hero-title { font-size: 5.2rem; }
@@ -117,16 +149,17 @@
     .faq-section { padding: 1.6rem; }
 }
 
-/* ── Contato ── */
-@media (max-width: 1100px) {
-    .contato__main { flex-direction: column; gap: 2rem; padding-inline: 4rem; }
-    .contato__info, .contato__form, .duvidas__accordion, .contato__plataforma { width: 100%; }
-    .contato__info-title { width: 100%; }
-    .accordion__grid { grid-template-columns: 1fr; }
+/* ==================== Contato ==================== */
+@media (min-width: 1100px) {
+    .contato__main { gap: 4rem; }
 }
 
-@media (max-width: 900px) {
-    .contato__plataforma { flex-direction: column; align-items: flex-start; justify-content: flex-end; min-height: 38rem; background: linear-gradient(to bottom, rgba(3, 5, 14, .46), rgba(3, 5, 14, .86)), url(../../img/home/satelite-sar.webp) center 74% / cover no-repeat; }
+@media (max-width: 1100px) {
+    .contato__main { flex-direction: column; gap: 2rem; padding-inline: 4rem; }
+    .contato__info, .contato__form, .duvidas__accordion { width: 100%; }
+    .contato__info-title { width: 100%; }
+    .accordion__grid { grid-template-columns: 1fr; }
+    .form__item { width: 100%; }
 }
 
 @media (max-width: 640px) {
@@ -135,10 +168,9 @@
     .contato__main { margin-top: -14rem; padding: 0 1.6rem 5rem; }
     .contato__form-row { grid-template-columns: 1fr; margin-top: 2rem; }
     .contato__form-title, .contato__info-title, .duvidas__accordion-title { font-size: 2.8rem; }
-    .contato__plataforma { padding: 2.4rem; }
 }
 
-/* ── Solução ── */
+/* ==================== Solução ==================== */
 @media (max-width: 1080px) {
     .solucao__overview-card, .solucao__impact-card { grid-template-columns: 1fr; }
     .solucao__impact-image { min-height: 28rem; }
@@ -157,20 +189,78 @@
     .solucao__timeline::before { left: 2.4rem; }
 }
 
-/* ── Dashboard ── */
+/* ==================== Dashboard ==================== */
+@media (max-width: 1180px) {
+    .dashboard__hero { padding: 11rem 5rem 14rem; }
+    .dashboard__hero-title { font-size: clamp(5.4rem, 7vw, 6.6rem); }
+    .dashboard__main-content, .dashboard__stats { width: min(calc(100% - 4rem), 118rem); }
+    .dashboard__main-content, .dashboard__stats-content { grid-template-columns: minmax(0, 1fr) minmax(30rem, 40rem); }
+    .dashboard__stats-left { grid-template-columns: minmax(12rem, .35fr) minmax(0, 1.65fr); }
+}
+
+@media (max-width: 1080px) {
+    .dashboard__main-content, .dashboard__stats-content { grid-template-columns: 1fr; }
+    .dashboard__main-left, .dashboard__main-right, .dashboard__stats-monitoring, .dashboard__stats-right { grid-column: 1; }
+    .dashboard__main-right .dashboard { height: auto; }
+    .dashboard__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .dashboard__stats-left { display: flex; flex-direction: column; align-items: stretch; }
+    .dashboard__stats-alert { min-height: 0; }
+    .dashboard__stats-visuals { width: 100%; gap: clamp(2rem, 5vw, 7rem); }
+    .dashboard__stats-media { align-self: center; }
+}
+
+@media (max-width: 900px) {
+    .dashboard__hero { padding: 10rem 4rem 13rem; }
+    .dashboard__hero-title { font-size: clamp(4.8rem, 8vw, 5.8rem); }
+    .dashboard__hero-desc { font-size: 1.7rem; }
+    .dashboard__main-content { padding-top: 4rem; }
+    .dashboard__mapa img, .dashboard__stats-image, .dashboard__stats-timeseries { object-fit: contain; }
+    .dashboard__stats-media, .dashboard__stats-timeseries { background: rgba(5, 8, 22, .7); }
+    .dashboard__stats-content { gap: 2rem; }
+    .alert__module { grid-template-columns: 4.2rem minmax(0, 1fr) auto; gap: 1.2rem; }
+    .alert__module-icon { width: 4.2rem; height: 4.2rem; }
+    .dashboard__mapa-frame img { object-fit: cover; }
+}
+
 @media (max-width: 760px) {
-    .dashboard__nav { overflow-x: auto; justify-content: flex-start; gap: 1rem; width: calc(100% - 3.2rem); padding: 1.2rem; }
-    .dashboard__nav-link { flex: 0 0 auto; min-height: 5.2rem; padding: 0 1.4rem; }
-    .dashboard__sections, .dashboard__main-content { width: calc(100% - 3.2rem); }
-    .dashboard__main-left { flex-direction: column; }
+    .dashboard__main-content, .dashboard__stats { width: calc(100% - 3.2rem); }
+    .dashboard__main-left { flex-direction: column; height: 65rem; }
+    .dashboard__card-label { font-size: 1.6rem; }
+    .dashboard__stats-value { font-size: 2.8rem; }
+    .dashboard__mapa-frame { aspect-ratio: auto; overflow: visible; }
+    .dashboard__mapa-legend { position: static; min-width: 0; margin: 0 1.2rem 1.2rem; }
+    .dashboard__mapa img { height: auto; }
 }
 
 @media (max-width: 640px) {
     .dashboard__hero { padding: 10rem 2rem 15rem; }
     .dashboard__hero-title { font-size: 4.2rem; }
-    .dashboard__nav { margin-top: -6rem; }
-    .dashboard__main-content { margin-top: 3rem; }
-    .dashboard__mapa-title { padding: 2rem 1.8rem 0; font-size: 2.4rem; }
-    .dashboard__mapa-legend { position: static; min-width: 0; margin: 0 1.2rem 1.2rem; }
-    .dashboard__mapa img { max-height: none; }
+    .dashboard__main-left { height: 50rem; }
+    .dashboard__hero-desc { font-size: 1.6rem; }
+    .dashboard__main-content { padding-top: 3rem; }
+    .dashboard__grid { grid-template-columns: 1fr; grid-template-rows: none; }
+    .dashboard__mapa > .dashboard__title { padding: 2rem 1.8rem 0; font-size: 2.4rem; }
+    .dashboard__mapa-frame { margin-top: 1.6rem; }
+    .dashboard__mapa img { height: auto; max-height: none; }
+    .dashboard__stats-monitoring { width: 100%; padding: 2rem; }
+    .dashboard__stats-visuals { grid-template-columns: 1fr; }
+    .dashboard__stats-media { aspect-ratio: auto; }
+    .dashboard__stats-media::before { display: none; }
+    .dashboard__stats-image, .dashboard__stats-timeseries { height: auto; object-fit: contain; }
+    .dashboard__alert-head { align-items: flex-start; }
+    .alert__module { grid-template-columns: 4.2rem minmax(0, 1fr); align-items: start; }
+    .alert__module-time { grid-column: 2; text-align: left; }
+    .dashboard__sparkline { width: 9rem; }
+}
+
+@media (max-width: 420px) {
+    .dashboard__hero-title { font-size: 3.6rem; }
+    .dashboard__title { font-size: 2rem; }
+    .dashboard__card-body { align-items: flex-start; flex-direction: column; }
+    .dashboard__sparkline { width: 100%; }
+    .dashboard__main-left { height: 40rem; }
+    .dashboard__stats-alert { padding: 2rem; }
+    .dashboard__alert-head { flex-direction: column; gap: .8rem; }
+    .alert__module { grid-template-columns: 3.8rem minmax(0, 1fr); }
+    .alert__module-icon { width: 3.8rem; height: 3.8rem; font-size: 1.6rem; }
 }
