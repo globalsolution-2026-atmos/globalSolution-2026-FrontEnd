@@ -18,6 +18,9 @@
 @import url('../components/modules-content.css');
 @import url('../components/popup.css');
 @import url('../components/accordion.css');
+@import url('../components/platform-cta.css');
+@import url('../components/dashboard.css');
+@import url('../components/graphics.css');
 
 /* Pages */
 @import url('../pages/home.css');
