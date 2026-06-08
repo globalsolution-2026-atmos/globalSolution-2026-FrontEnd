@@ -17,7 +17,7 @@
     .menu-left { flex-flow: row wrap; justify-content: flex-start; padding-right: 0; padding-bottom: 2rem; border-right: 0; border-bottom: .1rem solid rgba(255, 255, 255, .12); }
     .menu-right { justify-content: flex-start; }
     .panel.active { width: 100%; }
-    .solution-panel.active { grid-template-columns: 1fr; }
+    .about-panel.active { grid-template-columns: 1fr; }
     .container__modal-login { min-height: 0; }
     .login__content-left { display: none; }
     .login__content-right { width: 100%; padding: 2rem; }
@@ -170,23 +170,23 @@
     .contato__form-title, .contato__info-title, .duvidas__accordion-title { font-size: 2.8rem; }
 }
 
-/* ==================== Solução ==================== */
+/* ==================== Sobre ==================== */
 @media (max-width: 1080px) {
-    .solucao__overview-card, .solucao__impact-card { grid-template-columns: 1fr; }
-    .solucao__impact-image { min-height: 28rem; }
-    .solucao__overview-column + .solucao__overview-column { border-top: .1rem solid rgba(94, 162, 255, .14); border-left: none; }
+    .sobre__overview-card, .sobre__impact-card { grid-template-columns: 1fr; }
+    .sobre__impact-image { min-height: 28rem; }
+    .sobre__overview-column + .sobre__overview-column { border-top: .1rem solid rgba(94, 162, 255, .14); border-left: none; }
 }
 
 @media (max-width: 640px) {
-    .solucao__hero { padding: 10rem 2rem 18rem; }
-    .solucao__hero-title { font-size: 4.2rem; }
-    .solucao__overview { margin-top: -12rem; padding: 0 1.6rem; }
-    .solucao__overview-column, .solucao__technology-card, .solucao__impact-content { padding: 2.4rem 1.8rem; }
-    .solucao__impact { padding: 0 1.6rem; }
-    .solucao__impact-grid { grid-template-columns: 1fr; }
-    .solucao__item, .solucao__timeline-item { grid-template-columns: 5.2rem minmax(0, 1fr); gap: 1.4rem; }
-    .solucao__icon { width: 4.8rem; height: 4.8rem; }
-    .solucao__timeline::before { left: 2.4rem; }
+    .sobre__hero { padding: 10rem 2rem 18rem; }
+    .sobre__hero-title { font-size: 4.2rem; }
+    .sobre__overview { margin-top: -12rem; padding: 0 1.6rem; }
+    .sobre__overview-column, .sobre__technology-card, .sobre__impact-content { padding: 2.4rem 1.8rem; }
+    .sobre__impact { padding: 0 1.6rem; }
+    .sobre__impact-grid { grid-template-columns: 1fr; }
+    .sobre__item, .sobre__timeline-item { grid-template-columns: 5.2rem minmax(0, 1fr); gap: 1.4rem; }
+    .sobre__icon { width: 4.8rem; height: 4.8rem; }
+    .sobre__timeline::before { left: 2.4rem; }
 }
 
 /* ==================== Dashboard ==================== */

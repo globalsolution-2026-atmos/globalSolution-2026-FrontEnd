@@ -50,7 +50,7 @@ globalSolution-2026-FrontEnd-main/
 │   ├── equipe.html                   # Página da equipe
 │   ├── faq.html                      # Perguntas frequentes
 │   ├── contato.html                  # Formulário de contato
-│   ├── solucao.html                  # Apresentação da solução
+│   ├── sobre.html                    # Página sobre a Atmos
 │   └── solucao-dashboard.html        # Dashboard de monitoramento
 │
 └── assets/
@@ -76,7 +76,7 @@ globalSolution-2026-FrontEnd-main/
     │       ├── equipe.css
     │       ├── faq.css
     │       ├── contato.css
-    │       ├── solucao.css
+    │       ├── sobre.css
     │       └── solucao-dashboard.css
     │
     ├── js/
@@ -128,7 +128,7 @@ cd globalSolution-2026-FrontEnd-main
 ### Dashboard de Monitoramento
 > Interface de visualização de riscos urbanos com mapa de São Paulo, navegação por módulos e métricas em tempo real.
 
-### Página da Solução
+### Página Sobre
 > Apresentação completa da proposta Atmos: overview tecnológico, linha do tempo de implementação e casos de impacto.
 
 ### Formulário de Contato
