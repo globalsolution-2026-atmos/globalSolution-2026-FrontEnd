@@ -1,0 +1,89 @@
+/* =============================================
+   Graficos - Dashboard Atmos
+   ============================================= */
+
+/* 1. Sparklines */
+.dashboard__sparkline {
+    display: block;
+    flex-shrink: 0;
+    opacity: .9;
+}
+
+/* 2. Radiais */
+.dashboard__radial {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+}
+
+.dashboard__radial canvas {
+    position: absolute;
+    inset: 0;
+}
+
+.dashboard__radial-label {
+    position: relative;
+    z-index: 1;
+    color: #f85149;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.dashboard__radial-label--success {
+    color: #3fb950;
+}
+
+/* 3. Visual de monitoramento */
+.dashboard__stats-visuals {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 1.4rem;
+    min-width: 0;
+}
+
+.dashboard__stats-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    overflow: hidden;
+    border-radius: 1.4rem;
+}
+
+.dashboard__stats-media::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        rgba(5, 8, 22, .94) 0%,
+        rgba(5, 8, 22, .48) 34%,
+        rgba(5, 8, 22, 0) 72%
+    );
+}
+
+.dashboard__stats-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 4. Serie temporal */
+.dashboard__stats-timeseries {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1.4rem;
+    object-fit: contain;
+    object-position: center;
+}

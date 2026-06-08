@@ -1,0 +1,90 @@
+/* =============================================
+   Dashboard Inteligente — Atmos
+   ============================================= */
+
+.dashboard {
+    width: 100%;
+    max-width: 480px;
+}
+
+.dashboard__title {
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.dashboard__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+/* =============================================
+   Card
+   ============================================= */
+
+.dashboard__card {
+    background-color: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 1rem 1rem 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    min-height: 110px;
+}
+
+.dashboard__card-label {
+    font-size: 2rem;
+    color: var(--ice-cloud);
+    letter-spacing: 0.04em;
+    font-weight: 700;
+}
+
+.dashboard__card-body {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex: 1;
+    gap: 0.5rem;
+}
+
+.dashboard__card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* =============================================
+   Values
+   ============================================= */
+
+.dashboard__card-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.dashboard__card-value--danger  { color: #f85149; }
+.dashboard__card-value--warning { color: #e3b341; }
+.dashboard__card-value--info    { color: #58a6ff; }
+.dashboard__card-value--success { color: #3fb950; }
+
+/* =============================================
+   Trend badge
+   ============================================= */
+
+.dashboard__card-trend {
+    font-size: 1rem;
+    color: #8b949e;
+    font-weight: 400;
+}
+
+.dashboard__card-trend--up      { color: #f85149; }
+.dashboard__card-trend--warning { color: #e3b341; }
+.dashboard__card-trend--info    { color: #58a6ff; }
+.dashboard__card-trend--success { color: #3fb950; }
+.dashboard__card-trend--danger  { color: #f85149; }
