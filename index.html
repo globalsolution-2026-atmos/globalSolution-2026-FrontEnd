@@ -84,41 +84,41 @@
     <main>
 
         <!-- ── Modal de login ── -->
-        <dialog class="modal-login" aria-labelledby="modal-title" aria-modal="true">
-            <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal">
+        <dialog class="modal-login" aria-labelledby="modal-login-title" aria-describedby="modal-login-desc" aria-modal="true">
+            <button class="modal__close" id="btnFecharModal" type="button" aria-label="Fechar modal de login">
                 <span aria-hidden="true">×</span>
             </button>
             <div class="container__modal-login">
                 <div class="login__content-left" aria-hidden="true">
-                    <img src="./assets/img/logos/logo2.png" alt="">
-                    <img src="./assets/img/login/login-satelite-sar.jpg" alt="">
+                    <img src="./assets/img/logos/logo2.png" alt="" class="icon-login">
+                    <img src="./assets/img/login/login-satelite-sar.jpg" alt="" class="login-image">
                 </div>
                 <div class="login__content-right">
                     <form class="login-forms" autocomplete="off" novalidate>
                         <p class="title-eyebrow">Seja bem-vindo à Atmos</p>
-                        <h2 class="login__title" id="modal-title">Crie sua conta</h2>
-                        <p class="login__subtitle">Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de tecnologia espacial e inteligência artificial.</p>
+                        <h2 class="login__title" id="modal-login-title">Crie sua conta</h2>
+                        <p class="login__subtitle" id="modal-login-desc">Acesse a Atmos e acompanhe o comportamento urbano em tempo real através de tecnologia espacial, inteligência artificial e monitoramento climático avançado.</p>
                         <div class="login-labels">
                             <label for="name" class="login__label">
                                 <span>Nome</span>
                                 <i class="fa-solid fa-user input-icon" aria-hidden="true"></i>
-                                <input class="login__input" id="name" name="name" type="text" placeholder="Seu nome completo" autocomplete="name">
+                                <input class="login__input login-name" id="name" name="name" type="text" placeholder="Seu nome completo" autocomplete="name">
                             </label>
                             <label for="email" class="login__label">
                                 <span>E-mail</span>
                                 <i class="fa-regular fa-envelope input-icon" aria-hidden="true"></i>
-                                <input class="login__input" id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email">
+                                <input class="login__input login-email" id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email">
                             </label>
                             <label for="senha" class="login__label">
                                 <span>Senha</span>
                                 <i class="fa-solid fa-lock input-icon" aria-hidden="true"></i>
-                                <input class="login__input" id="senha" name="senha" type="password" placeholder="Senha" autocomplete="new-password">
+                                <input class="login__input login-senha" id="senha" name="senha" type="password" placeholder="Senha" autocomplete="new-password">
                                 <button type="button" class="password-show" aria-label="Mostrar senha">
                                     <i class="fa-regular fa-eye-slash" aria-hidden="true"></i>
                                 </button>
                             </label>
                         </div>
-                        <button class="alt-button login__btn" type="submit">
+                        <button class="alt-button login__btn submit-btn" id="submit-btn" type="submit">
                             <span>Conectar-se</span>
                         </button>
                     </form>
