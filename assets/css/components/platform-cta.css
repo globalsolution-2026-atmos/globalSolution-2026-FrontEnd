@@ -28,7 +28,7 @@
             rgba(3, 5, 14, .72) 42%,
             rgba(3, 5, 14, .34) 100%
         ),
-        url(../../img/home/satelite-sar.webp) center 72% / cover no-repeat;
+        url(../../img/home/satelite-sar.png) center 72% / cover no-repeat;
     box-shadow:
         0 1px 0 rgba(255, 255, 255, .12) inset,
         0 3rem 8rem rgba(0, 0, 0, .38);

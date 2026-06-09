@@ -1,7 +1,7 @@
 /* ── Variáveis da página ── */
 .page__sobre {
     --sobre-hero-height: calc(100vh - 2rem);
-    --sobre-hero-image: url(../../img/solucao/preview-solucao.webp);
+    --sobre-hero-image: url(../../img/solucao/preview-solucao.png);
     --sobre-content-bg: var(--space-black);
     --hero-content-blend-color: var(--sobre-content-bg);
     width: 100%;
@@ -314,7 +314,7 @@
     min-height: 100%;
     background:
         linear-gradient(90deg, rgba(4, 9, 24, .92), rgba(4, 9, 24, .16) 42%, transparent),
-        url(../../img/solucao/urban-view.webp) center / cover no-repeat;
+        url(../../img/solucao/urban-view.png) center / cover no-repeat;
 }
 
 .sobre__timeline-item:last-child .sobre__icon::after {

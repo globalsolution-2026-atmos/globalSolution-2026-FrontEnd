@@ -1,7 +1,7 @@
 /* ── Variáveis da página ── */
 .page__faq {
     --faq-hero-height: calc(100vh - 2rem);
-    --faq-hero-image: url(../../img/faq/preview-faq.webp);
+    --faq-hero-image: url(../../img/faq/preview-faq.png);
     --faq-content-bg: var(--space-black);
     --hero-content-blend-color: var(--faq-content-bg);
     width: 100%;

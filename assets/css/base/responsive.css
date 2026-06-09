@@ -52,7 +52,7 @@
         justify-content: flex-end;
         background:
             linear-gradient(to bottom, rgba(3, 5, 14, .46), rgba(3, 5, 14, .86)),
-            url(../../img/home/satelite-sar.webp) center 74% / cover no-repeat;
+            url(../../img/home/satelite-sar.png) center 74% / cover no-repeat;
     }
 
     .platform-cta--compact {

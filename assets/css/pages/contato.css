@@ -1,7 +1,7 @@
 /* ── Variáveis da página ── */
 .page__contato {
     --contato-hero-height: calc(100vh - 2rem);
-    --contato-hero-image: url(../../img/contato/preview-contato.webp);
+    --contato-hero-image: url(../../img/contato/preview-contato.png);
     --contato-content-bg: var(--space-black);
     --hero-content-blend-color: var(--contato-content-bg);
     width: 100%;

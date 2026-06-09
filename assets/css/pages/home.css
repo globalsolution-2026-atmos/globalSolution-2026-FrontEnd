@@ -8,7 +8,7 @@
     position: relative;
     overflow: hidden;
     isolation: isolate;
-    background: url(../../img/home/iss073e0575226orig.webp) center / cover no-repeat;
+    background: url(../../img/home/iss073e0575226orig.png) center / cover no-repeat;
 }
 
 .hero__container::before {
@@ -177,7 +177,7 @@ main { background-color: var(--space-black); }
 
 .cta__pitch {
     padding: 5rem;
-    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url(../../img/home/satelite-sar.webp) center / cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url(../../img/home/satelite-sar.png) center / cover no-repeat;
 }
 
 .cta__contact { display: flex; flex-direction: column; padding: 5rem; background-color: var(--void); }
