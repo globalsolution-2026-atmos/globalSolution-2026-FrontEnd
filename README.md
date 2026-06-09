@@ -96,6 +96,7 @@ globalSolution-2026-FrontEnd-main/
         ├── faq/                      # Imagens da página de FAQ
         ├── contato/                  # Imagens da página de contato
         ├── solucao/                  # Imagens das páginas de solução
+        ├── readme/                   # Capturas usadas neste README
         └── login/                    # Imagem do modal de login
 ```
 
@@ -125,14 +126,22 @@ cd globalSolution-2026-FrontEnd-main
 ### Página Inicial — Hero e Módulos
 > Seção principal com call-to-action, estatísticas da plataforma (12+ cidades, 98% precisão, 30s latência) e cards de funcionalidades.
 
+![Página Inicial — Hero e Módulos](./assets/img/readme/home-1.png)
+
 ### Dashboard de Monitoramento
 > Interface de visualização de riscos urbanos com mapa de São Paulo, navegação por módulos e métricas em tempo real.
+
+![Dashboard de Monitoramento](./assets/img/readme/dashboard-2.png)
 
 ### Página Sobre
 > Apresentação completa da proposta Atmos: overview tecnológico, linha do tempo de implementação e casos de impacto.
 
+![Página Sobre](./assets/img/readme/sobre-3.png)
+
 ### Formulário de Contato
 > Formulário validado com campo custom select, feedback visual de erro e geração de ticket de atendimento.
+
+![Formulário de Contato](./assets/img/readme/form-contato-4.png)
 
 ---
 
