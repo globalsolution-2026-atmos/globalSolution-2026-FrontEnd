@@ -1,14 +1,26 @@
 .modal-login {
     position: fixed;
-    margin: 0 auto;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
     border: none;
-    align-self: center;
     overflow: hidden;
-    width: min(300vw, 135rem);
-    height: 90rem;
+    width: min(calc(100vw - 4rem), 135rem);
+    max-width: calc(100vw - 4rem);
+    height: min(90rem, calc(100vh - 4rem));
+    max-height: calc(100vh - 4rem);
     padding: 2.4rem;
     background: var(--dark-gradient);
     color: var(--mist)
+}
+
+@supports (height: 100dvh) {
+    .modal-login {
+        width: min(calc(100dvw - 4rem), 135rem);
+        max-width: calc(100dvw - 4rem);
+        height: min(90rem, calc(100dvh - 4rem));
+        max-height: calc(100dvh - 4rem);
+    }
 }
 
 .modal-login::backdrop {
@@ -32,6 +44,7 @@
 .container__modal-login {
     display: flex;
     height: 100%;
+    min-height: 0;
     flex-direction: row;
 }
 
@@ -40,8 +53,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 0;
     padding: 2rem 3rem;
     width: 50%;
+    overflow-y: auto;
 }
 
 .login-forms {

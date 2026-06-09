@@ -1,7 +1,24 @@
 /* ==================== Componentes globais ==================== */
 @media (max-width: 1180px) {
     .modules__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .modal-login { width: calc(100% - 3rem); height: auto; max-height: calc(100vh - 3rem); overflow-y: auto; }
+    .modal-login {
+        width: calc(100vw - 3rem);
+        max-width: calc(100vw - 3rem);
+        height: min(90rem, calc(100vh - 3rem));
+        max-height: calc(100vh - 3rem);
+        overflow: hidden;
+    }
+}
+
+@supports (height: 100dvh) {
+    @media (max-width: 1180px) {
+        .modal-login {
+            width: calc(100dvw - 3rem);
+            max-width: calc(100dvw - 3rem);
+            height: min(90rem, calc(100dvh - 3rem));
+            max-height: calc(100dvh - 3rem);
+        }
+    }
 }
 
 @media (max-width: 860px) {
@@ -18,10 +35,36 @@
     .menu-right { justify-content: flex-start; }
     .panel.active { width: 100%; }
     .about-panel.active { grid-template-columns: 1fr; }
-    .container__modal-login { min-height: 0; }
+    .modal-login {
+        width: calc(100vw - 2rem);
+        max-width: calc(100vw - 2rem);
+        height: calc(100vh - 2rem);
+        max-height: calc(100vh - 2rem);
+        padding: 1.6rem;
+    }
+    .container__modal-login { height: 100%; min-height: 0; overflow-y: auto; }
     .login__content-left { display: none; }
-    .login__content-right { width: 100%; padding: 2rem; }
-    .login-labels { padding: 3rem 0; }
+    .login__content-right { width: 100%; min-height: 100%; padding: 3rem 1rem 1rem; overflow: visible; }
+    .login__title { margin: 1.4rem 0; font-size: clamp(2.8rem, 9vw, 3.5rem); }
+    .login__subtitle { font-size: 1.4rem; line-height: 1.5; }
+    .login-labels { padding: 2.4rem 0; gap: 1rem; }
+    .login__btn { padding: 1.6rem 0; }
+}
+
+@supports (height: 100dvh) {
+    @media (max-width: 760px) {
+        .modal-login {
+            width: calc(100dvw - 2rem);
+            max-width: calc(100dvw - 2rem);
+            height: calc(100dvh - 2rem);
+            max-height: calc(100dvh - 2rem);
+        }
+    }
+}
+
+@media (max-width: 760px) and (max-height: 680px) {
+    .login__content-right { justify-content: flex-start; }
+    .login-labels { padding: 1.4rem 0; }
 }
 
 @media (max-width: 640px) {
